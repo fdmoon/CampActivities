@@ -1,2 +1,7 @@
+-----------------------------------------
 # CampActivities
-This is my coding boot camp repository.
+
+#### This is the repository for activities
+
+-----------------------------------------
+
