@@ -5,7 +5,9 @@
 
 -----------------------------------------
 
-## Sep. 25 (Mon)
+### [WEEK 1]
+
+## DAY 1 - Sep. 25 (Mon)
 
 • https://codingbootcamp.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=e87c89c0-b3df-4c7c-b5b1-e88c51c08fdd
 
@@ -20,7 +22,7 @@
 • JS: console.log(); <= output at console tab of devtools, debugger; <= break point
 
 
-## Sep. 26 (Tue)
+## DAY 2 - Sep. 26 (Tue)
 
 • https://codingbootcamp.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=d772ce08-d74e-4b41-9a74-815618656e89
 
@@ -58,12 +60,33 @@
 • https://www.toptal.com/designers/subtlepatterns/ <= background patterns
 
 
-## Sep. 27 (Wed)
+## DAY 3 - Sep. 27 (Wed)
+
+• https://codingbootcamp.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=e2422309-4724-43f1-ab07-8774671447c9
+
+• CSS: attribute... box-sizing(:border-box), float <-> clear(:both), overflow(:auto)
+• CSS: selector... clearfix::after <= to fix after floating (Clearfix)
+
+• https://www.sessions.edu/color-calculator/ <= color codes
+
+• Web Hosting via GitHub:
+   Basic.. repo-name = username.github.io >> https://username.github.io
+   Advanced.. https://username.github.io/other-repo-name <= where, other-repo-name is connected to "gh-pages" branch of that repository
+
+
+## DAY 4 - Sep. 28 (Thu)
 
 • 
 
 
-## Sep. 28 (Thu)
+## DAY 5 - Sep. 29 (Fri)
+
+• 
+
+
+### [WEEK 2]
+
+## DAY 1 - Oct. 2 (Mon)
 
 • 
 
