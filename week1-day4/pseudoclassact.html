@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		body {
+			font-size: 2em;
+		}
+
+		a:hover {	/* pseudo class */
+			background-color: red;
+		}
+
+		a:visited {
+			background-color: yellow;
+			color: green;
+		}
+
+		a:active {
+			background-color: blue;
+		}
+
+		#idbtn:hover {
+			background-color: red;
+		}
+
+		.clsbtn:hover {
+			background-color: blue;
+		}
+
+		p, h1::first-letter {	/* pseudo elements */
+		    color: #ff0000;
+		    font-size: xx-large;
+		}
+	</style>
+</head>
+<body>
+	<p>
+		abcd
+		<a href="#3">Link A</a>
+	</p>
+	<br>
+	<br>	
+	<a href="#">Link B</a>
+	<br>
+	<br>
+	<a href="#">Link C</a>
+	<br>
+	<br>
+
+	<button id="idbtn">aaa (id)</button>
+
+	<button class="clsbtn">aaa (class)</button>
+
+	<p class="abc">Paragraph</p>
+
+	<h1>Title</h1>
+</body>
+</html>

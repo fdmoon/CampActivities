@@ -1,4 +1,4 @@
------------------------------------------
+﻿-----------------------------------------
 # CampActivities
 
 #### september2017ft.slack.com
@@ -79,7 +79,33 @@
 
 ### DAY 4 - Sep. 28 (Thu)
 
-• 
+• https://codingbootcamp.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=73f9edfb-f0af-4acb-83eb-8b59b6f8da99
+
+• CSS: * { box-sizing: border-box; } <= includes content, padding and border
+
+• HTML: Try to use semantic tags like nav, section, article, etc. rather than div <= Don't make div soup :D
+
+• https://tympanus.net/codrops/ <= layout
+
+• https://www.awwwards.com/ <= CSS Typography
+
+• http://typeplate.com/ <= typographic starter kit
+
+• https://fonts.google.com/ <= fonts (Embed Font w/ STANDARD or @IMPORT in HTML and Specify in CSS)
+
+• http://cssreference.io/ <= CSS Reference (= a free visual guide to CSS)
+
+• http://fontawesome.io/icons/ or https://icomoon.io/ <= font-level icons
+
+• https://www.bootstrapcdn.com/fontawesome/ <= BootstrapCDN for Font Awesome
+
+• http://www.colourlovers.com/ <= COLOURlovers: Color Trends + Palettes
+
+• https://css-tricks.com/pseudo-class-selectors/ <= Pseudo Class Selectors (= CSS selectors with a colon preceding them)
+
+• http://getbootstrap.com/ <= Bootstrap (= The most popular HTML, CSS, and JS library in the world)
+
+• http://materializecss.com/ <= Materialize (= a modern responsive CSS framework based on Material Design by Google)
 
 
 ### DAY 5 - Sep. 29 (Fri)
