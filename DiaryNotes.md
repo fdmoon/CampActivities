@@ -21,7 +21,6 @@
 
 • JS: console.log(); <= output at console tab of devtools, debugger; <= break point
 
-
 ### DAY 2 - Sep. 26 (Tue)
 
 • https://codingbootcamp.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=d772ce08-d74e-4b41-9a74-815618656e89
@@ -59,7 +58,6 @@
 
 • https://www.toptal.com/designers/subtlepatterns/ <= background patterns
 
-
 ### DAY 3 - Sep. 27 (Wed)
 
 • https://codingbootcamp.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=e2422309-4724-43f1-ab07-8774671447c9
@@ -75,7 +73,6 @@
    Basic.. repo-name = username.github.io >> https://username.github.io
    
    Advanced.. https://username.github.io/other-repo-name <= where, other-repo-name is connected to "gh-pages" branch of that repository
-
 
 ### DAY 4 - Sep. 28 (Thu)
 
@@ -107,10 +104,11 @@
 
 • http://materializecss.com/ <= Materialize (= a modern responsive CSS framework based on Material Design by Google)
 
-
 ### DAY 5 - Sep. 29 (Fri)
 
-• 
+• https://codingbootcamp.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=8dded310-982b-44e6-8ede-2a29fc282926
+
+• CSS: @media screen and (max-width: 640px) {} <= Media Quries for Responsive Web Design
 
 
 ## [WEEK 2]
