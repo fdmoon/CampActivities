@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+		var wantSteak = confirm("Do you want to eat steak?")
+
+		if(wantSteak) {
+			document.write("Here's a Steak Sanwich! <br><br><br>");
+		}
+		else {
+			document.write("Here's a Tofu Stir-Fry! <br><br><br>");
+		}
+
+		var yearbirth = prompt("What's your birth year?");
+		// yearbirth = Number(yearbirth);
+
+		var yourage = 2017 - yearbirth;
+
+		if(yourage < 21) {
+			document.write("No Sake for you! Your age =", yourage);
+		}
+		else {
+			document.write("Your age =", yourage);
+		}
+
+	</script>
+
+</body>
+</html>
+

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Sushi Prompt - Unsolved</title>
+  </head>
+  <body>
+
+    <script type="text/javascript">
+      document.write("What's this? <br><br><br>");
+    </script>
+
+	<form>
+	    <label id="QuestionToAsk" name="QuestionToAsk">Here is talked.</label><br />
+	    <input type="button" value="Yes" name="yes" onClick="ret=true;returnfunction()" />
+	    <input type="button" value="No" onClick="ret=false;returnfunction()" />
+	</form>
+
+    <script type="text/javascript">
+
+		// Write code here!
+    	var bLikeSushi = confirm("Do you like sushi?")
+    	var sLikeFood = prompt("What kind of sushi do you like?")
+
+    	alert("You like sushe: " + bLikeSushi);
+    	alert("You like " + sLikeFood);
+
+	    function returnfunction()
+	    {
+	        alert(ret);
+	    }    	
+
+    </script>
+
+  </body>
+</html>
