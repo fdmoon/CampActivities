@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+		printIam(5);
+
+		function printIam(n) {
+			var str;
+			for(var i=0; i<n; i++) {
+				str = "I am " + i;
+				console.log(str);
+				document.write(str + "<br>");
+			}
+		}
+
+		var myFarm = ["chickens", "pigs", "cows", "horses", "ostriches"];
+
+		myFarm.map(function(x) {
+			if((x[0] === "c") || (x[0] === "o")) {
+				document.write(x + " starts with 'c' or 'o'! <br>");
+			}
+			else {
+				document.write(x + " doesn't start with 'c' or 'o'! <br>");	
+			}
+		});
+
+		for(var i=0; i<myFarm.length; i++) {
+			console.log(myFarm[i]);
+
+			if((myFarm[i][0] === "c") || (myFarm[i][0] === "o")) {
+				alert(myFarm[i] + " starts with 'c' or 'o'!");
+			}
+
+			// .indexOf() .charAt() .startWith()
+		}
+	</script>
+
+</body>
+</html>

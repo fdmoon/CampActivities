@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Rock Paper Scissors Part 2
+  </title>
+</head>
+
+<body>
+
+  <div id="game">
+    <div> User guess: <span id="userguess"><span></span></div>
+    <div> Computer guess: <span id="comguess"><span></span></div>
+    <div> Wins: <span id="wins">0</span></div>
+    <div> Loses: <span id="loses">0</span></div>
+    <div> Ties: <span id="ties">0</span></div>
+  </div>
+
+  <script type="text/javascript">
+
+    // Creates an array that lists out all of the options (Rock, Paper, or Scissors).
+    var computerChoices = ["r", "p", "s"];
+
+    var winnum = 0;
+    var losenum = 0;
+    var tienum = 0;
+
+    // This function is run whenever the user presses a key.
+    document.onkeyup = function(event) {
+
+      console.log(event);
+
+      // Determines which key was pressed.
+      var userGuess = event.key;
+
+      if(computerChoices.indexOf(userGuess) === -1) {
+        alert("You should choose among r, p, s!");
+        return;
+      }
+
+      // Randomly chooses a choice from the options array. This is the Computer's guess.
+      var computerGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)];
+
+      // Alerts the key the user pressed (userGuess).
+      alert("User guess: " + userGuess);
+      var userEl = document.getElementById("userguess");
+      userEl.textContent = userGuess;
+
+      // Alerts the Computer's guess.
+      alert("Computer guess: " + computerGuess);
+      var comEl = document.getElementById("comguess");
+      comEl.textContent = computerGuess;      
+
+      if((userGuess === 'r' && computerGuess === 's') || (userGuess === 'p' && computerGuess === 'r') || (userGuess === 's' && computerGuess === 'p')) {
+        winnum += 1;
+        var winsEl = document.getElementById("wins");
+        winsEl.textContent = winnum;              
+      }
+      else if((userGuess === 'r' && computerGuess === 'p') || (userGuess === 'p' && computerGuess === 's') || (userGuess === 's' && computerGuess === 'r')) {
+        losenum += 1;
+        var losesEl = document.getElementById("loses");
+        losesEl.textContent = losenum;                  
+      }
+      else {
+        tienum += 1;
+        var tiesEl = document.getElementById("ties");
+        tiesEl.textContent = tienum;                              
+      }
+    };
+  </script>
+
+</body>
+
+</html>

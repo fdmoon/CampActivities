@@ -117,17 +117,37 @@
 
 • https://codingbootcamp.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=a0b548d1-208a-4cfd-a939-8ca3614ecaa3
 
+• CSS: Set !important next to value for higher priority (ex. key: value !important;)
+
 • JS: In console.log(), + is acted as a concatenation when to met string ("") no matter where it is on the left or the right
 
 • JS: All data from <form> are transferred as a "TEXT"
 
 • JS: array.indexOf() can be used if a specific data is in the array (-1 if not)
 
-• JS: array.map(function(x) {}); <= same as for(var i=0; i<array.length; i++) {}, x represents each item in array, a return value is assinged to other array
+• JS: array.map(function(x) {});
+   <= The map() method creates a new array with the results of calling a provided function on every element in the calling array.
+   <= same as for(var i=0; i<array.length; i++) {}, x represents each item in array, a return value is assinged to other array
 
 • DRY: Don't Repeat Yourself <-> WET: We Enjoy Typing
 
 • https://bootswatch.com/ <= Free themes for Bootstrap
 
 ### DAY 2 - Oct. 3 (Tue)
+
+• https://codingbootcamp.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=3cb82ade-b581-44cf-9a49-046d01c77b82
+
+• JS: How to access the first character... .indexOf(char)===0, charAt(0)===char, startWith(char1, char2, ...)
+
+• JS: Math.random(); <= generating random number 0~1
+
+• Devtools: How to debug pseudo classes... Select a element -> :hov click and force element state in Styles
+
+• Devtools: How to debug JS... F5 Refresh, F8 Resume, F10 go to next, F11 go into the function
+
+• https://www.w3schools.com/css/css3_animations.asp <= CSS animations
+
+### DAY 3 - Oct. 4 (Wed)
+
+• 
 
