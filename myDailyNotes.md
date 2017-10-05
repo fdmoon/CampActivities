@@ -149,5 +149,19 @@
 
 ### DAY 3 - Oct. 4 (Wed)
 
+• https://codingbootcamp.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=f96eb1ef-f199-4bd2-b32c-7b236ed035b8
+
+• JS: Can see all methods and events of a specific object in console of devtools (ex. type "window" in console of devtools!)
+
+• JS: Local variables has higher priority than global variables in case that they are the same variable name
+
+• JS: array.forEach(function(currentValue, index, arr), thisValue);
+
+• JS: Can access property's value of a object like "object["str" + i ]"
+
+• JS: document.querySelector("#id").innerHTML = "";
+
+### DAY 4 - Oct. 5 (Thu)
+
 • 
 
