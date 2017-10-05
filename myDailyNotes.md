@@ -69,10 +69,8 @@
 • https://www.sessions.edu/color-calculator/ <= color codes
 
 • Web Hosting via GitHub:
-
-   Basic.. repo-name = username.github.io >> https://username.github.io
-   
-   Advanced.. https://username.github.io/other-repo-name <= where, other-repo-name is connected to "gh-pages" branch of that repository
+	Basic.. repo-name = username.github.io >> https://username.github.io
+	Advanced.. https://username.github.io/other-repo-name <= where, other-repo-name is connected to "gh-pages" branch of that repository
 
 ### DAY 4 - Sep. 28 (Thu)
 
@@ -126,8 +124,8 @@
 • JS: array.indexOf() can be used if a specific data is in the array (-1 if not)
 
 • JS: array.map(function(x) {});
-   <= The map() method creates a new array with the results of calling a provided function on every element in the calling array.
-   <= same as for(var i=0; i<array.length; i++) {}, x represents each item in array, a return value is assinged to other array
+	<= The map() method creates a new array with the results of calling a provided function on every element in the calling array.
+	<= same as for(var i=0; i<array.length; i++) {}, x represents each item in array, a return value is assinged to other array
 
 • DRY: Don't Repeat Yourself <-> WET: We Enjoy Typing
 
@@ -163,5 +161,39 @@
 
 ### DAY 4 - Oct. 5 (Thu)
 
+• https://codingbootcamp.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=093ac309-6824-40bf-b66b-f2cf2e5aaa19
+
+• CSS: In selectors, multiple selectors are divided by comma(,) and white space means child element
+
+• JQ: $("tag" or ".class" or "#id" or this or document.tag)
+
+• JQ: var newDiv = $("<div>"); <= to make new element with JQuery
+
+• JQ: For .each(),
+	$( selector ).each(function( index ) {}
+	$.each( array, function( index, value ) {}
+	$.each( obj, function( key, value ) {}
+
+• JQ: $(document).ready( function() {} ); <= called when DOM is ready
+
+• JQ: $(selector).on("event", function() {}); <= in function argument, set function definition or only custom function name (not call that function!)
+
+• JQ: To inserts specified content ("in" the selected elements),
+	.append() <= at the end of the selected elements
+	.prepend() <= at the beginning of the selected elements
+
+• JQ: $(selector).animate({params},speed,callback);
+
+• JQ: For background music, 
+	var elAudio = document.createElement("audio");
+	elAudio.setAttribute("src", "anyMusic.mp3");
+	elAudio.play();
+	elAudio.pause();
+
+• https://css-tricks.com/dom/ <= What is the DOM?
+
+• http://www.adamcamacho.com/ <= great reference TA Adam's website
+
+### DAY 5 - Oct. 6 (Fri)
 • 
 
