@@ -178,7 +178,7 @@
 
 • JQ: $(selector).on("event", function() {}); <= in function argument, set function definition or only custom function name (not call that function!)
 
-• JQ: To inserts specified content ("in" the selected elements),
+• JQ: To inserts specified content ("inside" the selected elements),
 	.append() <= at the end of the selected elements
 	.prepend() <= at the beginning of the selected elements
 
@@ -187,6 +187,7 @@
 • JQ: For background music, 
 	var elAudio = document.createElement("audio");
 	elAudio.setAttribute("src", "anyMusic.mp3");
+	elAudio.setAttribute("loop", "true");	// continuously
 	elAudio.play();
 	elAudio.pause();
 
@@ -195,5 +196,25 @@
 • http://www.adamcamacho.com/ <= great reference TA Adam's website
 
 ### DAY 5 - Oct. 6 (Fri)
+
+• https://codingbootcamp.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=64bc4d08-a2ea-435e-a8e7-2458e3c3fdbe
+
+• JS: For reusable classes,
+	function ClassName(arg1, arg2, ...) {
+		this.property = arg1;		// set initial value
+		this[arg2] = function() {};	// set function name !!!
+	}
+
+• JS: In callback function, can access the element itself without event parameter using "this"
+
+• JS: parseInt() <= convert to Integer
+
+• JQ: typeof $(selector) is "object" based on DOM
+
+
+## [WEEK 3]
+
+### DAY 1 - Oct. 9 (Mon)
+
 • 
 
