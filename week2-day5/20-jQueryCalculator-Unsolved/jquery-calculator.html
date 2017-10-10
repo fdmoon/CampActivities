@@ -94,7 +94,8 @@ $(document).ready(function(){
 
 // Your code here...
     $(".number").on("click", function() {
-        var getValue = $(this).attr("value");
+        // var getValue = $(this).attr("value");
+        var getValue = this.value;
 
         if(calcStatus === 0) {
             number1 += getValue;
@@ -172,10 +173,10 @@ $(document).ready(function(){
         number2 = "";
         operator = "";        
 
-        $("#first-number").empty();
-        $("#second-number").empty();
-        $("#operator").empty();
-        $("#result").empty();
+        $("#first-number, #second-number, #operator, #result").empty();
+        // $("#second-number").empty();
+        // $("#operator").empty();
+        // $("#result").empty();
     });
 
 });

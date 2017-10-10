@@ -195,6 +195,8 @@
 
 • http://www.adamcamacho.com/ <= great reference TA Adam's website
 
+• https://codepen.io/ <= social development environment for front-end designers and developers
+
 ### DAY 5 - Oct. 6 (Fri)
 
 • https://codingbootcamp.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=64bc4d08-a2ea-435e-a8e7-2458e3c3fdbe
@@ -211,10 +213,20 @@
 
 • JQ: typeof $(selector) is "object" based on DOM
 
+• http://game-icons.net/ <= free game icons
+
 
 ## [WEEK 3]
 
 ### DAY 1 - Oct. 9 (Mon)
+
+• https://codingbootcamp.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=4642242c-ef85-4319-9dbe-16c8d40c746c
+
+• JS: this.value; <= how to access value attribute
+
+• JQ: $("selector1, selector2, ...") <= multiple selectors
+
+### DAY 2 - Oct. 10 (Tue)
 
 • 
 
