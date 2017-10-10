@@ -228,5 +228,33 @@
 
 ### DAY 2 - Oct. 10 (Tue)
 
+• https://codingbootcamp.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=81d4ca2a-87aa-4296-b77d-a213f516e0f4
+
+• JS: setTimeout(function, milliseconds, param1, param2, ...);
+	<= setTimeout invokes function "only once"
+	<= function is always involved in "window" object even if function is one of methods in any class
+	<= inside function, "this" always means "window" object
+
+• JS: setInterval(function, milliseconds, param1, param2, ...);
+	<= setInterval invokes function "periodically"
+
+• JS/JQ: JavaScript's window.onload vs. jQuery's $(document).ready()
+	$(document).ready()... after the HTML document has been loaded
+	window.onload... when all content (e.g. images) also has been loaded (later)
+	<= The onload event is a standard event in the DOM, while the ready event is specific to jQuery
+	<= The purpose of the ready event is that it should occur as early as possible after the document has loaded, so that code that adds functionality to the elements in the page doesn't have to wait for all content to load
+
+• https://codility.com/ <= Source, Assess, Interview and Hire top Programmers with Codility
+
+• https://www.hackerrank.com/ <= Say Goodbye to Whiteboards, Hello to Smarter Interviewing
+
+• https://www.pramp.com/#/ <= Practice Live Coding Interviews
+
+• https://projecteuler.net/ <= A website dedicated to the fascinating world of mathematics and programming
+
+• https://themeforest.net/ <= WordPress Themes & Website Templates From $2
+
+### DAY 3 - Oct. 11 (Wed)
+
 • 
 
