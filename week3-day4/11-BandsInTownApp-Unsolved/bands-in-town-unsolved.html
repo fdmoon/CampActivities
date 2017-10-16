@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Bands In Town</title>
+  <style>
+    ul {
+      list-style-position: inside;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Artist Select Box -->
+  <form id="artist-form">
+
+    <!-- Label for Text Box -->
+    <label for="artist-input">Choose Your Artist</label>
+
+    <!-- Text Input Box -->
+    <input type="text" id="artist-input"><br>
+
+    <!-- Submit Button -->
+    <input id="select-artist" type="submit" value="GO!">
+  </form>
+
+  <!-- Artist Information -->
+  <div id="artist-div"></div>
+  <div id="artist-event"></div>
+
+</body>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+  function searchBandsInTown(artist) {
+    // Add code to query the bands in town api searching for the artist recieved as an argument to this function
+    // Using jQuery, append the following to the #artist-div :
+    // The artist's name
+    // The artists thumbnail image
+    // The number of fans tracking this artist
+    // The number of upcoming events for this artist
+    // A link to the bandsintown url for this artist
+    // Note: Append actual HTML elements, not just text
+    var queryURL = "https://rest.bandsintown.com/artists/" + artist + "?app_id=bootcamp";
+
+    $.ajax({ url: queryURL, method: "GET" }).done(function(response) {
+      $("#artist-div").empty();
+
+      var newElement;
+
+      $("#artist-div").append("<h2>" + response.name + "</h2>");
+
+      newElement = $("<img>").attr("src", response.thumb_url);
+      $("#artist-div").append(newElement);
+
+      $("#artist-div").append("<h3>The number of fans : " + response.tracker_count + "</h3>");
+
+      $("#artist-div").append("<h3>The number of upcoming events : " + response.upcoming_event_count + "</h3>");
+
+      newElement = $("<a>").attr("href", response.url).text(response.url);
+      $("#artist-div").append(newElement);
+    });
+
+    queryURL = "https://rest.bandsintown.com/artists/" + artist + "/events?app_id=bootcamp";
+    $.ajax({ url: queryURL, method: "GET" }).done(function(response) {
+      $("#artist-event").empty();
+
+      var newParent;
+      var newChild, subChild;
+
+      $("#artist-event").append("<h3>Upcoming Events</h3>");
+
+      for(var i=0; i<response.length; i++) {
+        newParent = $("<ul>").append("<strong>Event #" + (i+1) + "</strong>");
+        newChild = $("<li>").append(new Date(response[i].datetime));
+        newParent.append(newChild);
+        newChild = $("<li>").append(response[i].venue.name + ", " + response[i].venue.city + ", " + response[i].venue.country);
+        newParent.append(newChild);
+        subChild = $("<a>").attr("href", response[i].url).append(response[i].url);
+        newChild = $("<li>").append(subChild);
+        newParent.append(newChild);
+        $("#artist-event").append(newParent);
+      }
+    });
+  }
+
+  // Event handler for user clicking the select-artist button
+  $("#select-artist").on("click", function(event) {
+    // Preventing the button from trying to submit the form
+    event.preventDefault();
+    // Storing the artist name
+    var artist = $("#artist-input").val().trim();
+
+    // Running the searchBandsInTown function (passing in the artist as an argument)
+    searchBandsInTown(artist);
+  });
+</script>
+
+</html>

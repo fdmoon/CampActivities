@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript Content!</title>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+  <style type="text/css">
+    .drinkmenu {
+      color: red;
+      font-size: 20px;
+    }
+    
+  </style>
+</head>
+<body>
+
+  <h1>Drink Selection!</h1>
+  <hr>
+
+  <!-- Here we create a generic drink-options div -->
+  <div id="drink-options"></div>
+
+  <script type="text/javascript">
+
+    // Array holds all of the drinks available
+    var drinkList = [
+      "Coffee: $5",
+      "Espresso: $7",
+      "Cappuccino: $6",
+      "Latte: $4",
+      "Tea: $3",
+      "Ice Coffee: $6",
+      "Ice Espresso: $8",
+      "Ice Latte: $6",
+      "Ice Tea: $4"
+    ];
+
+    drinkList.forEach(function(item) {
+      var newDiv = $("<div>");
+      newDiv.text(item);
+      newDiv.attr("class", "drinkmenu");
+      $("#drink-options").append(newDiv);
+    });
+
+    $(document.body).on("click", function() {
+        $(".drinkmenu").attr("class", "drinkmenu1");
+    });
+
+  </script>
+
+</body>
+</html>

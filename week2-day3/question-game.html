@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<h3>You must answer by hitting t (for true) or f (for false).</h3>
+	<p id="score"></p>
+	<p id="qtext">???</p>
+
+
+	<script type="text/javascript">
+		var questions = {
+			q1: ["The sky is blue.", 't'],
+			q2: ["There are 365 days in a year.", 't'],
+			q3: ["There are 6 days in a week.", 'f'],
+			q4: ["Today is Monday.", 'f'],
+			q5: ["Today is October 14th.", 't'],
+			q6: ["There are 7 days in a week.", 't'],
+			q7: ["There are 366 days in a year..", 'f'],
+			q8: ["The sky is red.", 'f'],
+			q9: ["Today is Wednesday.", 't'],
+			q10: ["Today is September 14th", 'f']
+		}
+
+		var pos = 1;
+		var score = 0;
+
+		document.querySelector("#score").innerHTML = "Your score: " + score;
+
+		var elQtext = document.getElementById("qtext");
+		elQtext.textContent = questions["q"+pos][0];
+			
+
+		document.onkeyup = function(event) {
+			var letter = event.key;
+			letter = letter.toLowerCase();
+
+			if((letter === 't') || (letter === 'f')) {
+				if(letter === questions["q"+pos][1]) {
+					alert("You are right!");
+					document.querySelector("#score").innerHTML = "Your score: " + (++score);
+
+					// score += 1;
+					// document.querySelector("#score").innerHTML = "Your score: " + score;
+				}
+				else {
+					alert("You are wrong!");
+				}
+
+				pos += 1;
+
+				if(pos > 10) {
+					elQtext.textContent = "Game Over!";	
+				}
+				else {
+					elQtext.textContent = questions["q"+pos][0];
+				}
+			}			
+		}
+
+	</script>
+
+</body>
+</html>
