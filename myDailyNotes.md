@@ -238,7 +238,7 @@
 • JS: setInterval(function, milliseconds, param1, param2, ...);
 	<= setInterval invokes function "periodically"
 
-• JS/JQ: JavaScript's window.onload vs. jQuery's $(document).ready()
+• JS+JQ: JavaScript's window.onload vs. jQuery's $(document).ready()
 	$(document).ready()... after the HTML document has been loaded
 	window.onload... when all content (e.g. images) also has been loaded (later)
 	<= The onload event is a standard event in the DOM, while the ready event is specific to jQuery
@@ -250,11 +250,116 @@
 
 • https://www.pramp.com/#/ <= Practice Live Coding Interviews
 
+• https://www.interviewcake.com/
+
+• https://interviewing.io/
+
 • https://projecteuler.net/ <= A website dedicated to the fascinating world of mathematics and programming
 
 • https://themeforest.net/ <= WordPress Themes & Website Templates From $2
 
 ### DAY 3 - Oct. 11 (Wed)
 
-• 
+• https://codingbootcamp.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=2c1bdb4e-3054-43ac-a66f-6ad2bd29baae
+
+• JQ: AJAX...
+	$.ajax({
+		url: query,
+		method: "GET"	// HTTP (POST-GET-PUT-DELETE) vs. DB (C-R-U-D)
+	}).done(function(response) {
+		// Here, "this" means requested class!
+	});
+
+• JQ: $(selector).children(tag).eq(index); <= if tag is null, it means all
+
+• JS: https://medium.com/javascript-scene/javascript-factory-functions-vs-constructor-functions-vs-classes-2f22ceddf33e <= JavaScript Factory Functions vs Constructor Functions vs Classes
+
+• https://market.mashape.com/explore/ <= Powering APIs, Microservices and Serverless Software
+
+• https://www.warnerbros.com/archive/spacejam/movie/jam.htm <= Space Jam Website
+
+• https://github.com/Giphy/GiphyAPI <= Giphy/GiphyAPI
+
+• https://developers.giphy.com/docs/ <= GIPHY Developers | API Documentation
+
+• http://www.omdbapi.com/ <= The Open Movie Database (apikey=40e9cece)
+
+• http://openweathermap.org/ <= Current weather and forecasts in your city (appid=166a433c57516f51dfab1f7edaed8413) >> https://openweathermap.org/appid
+
+• https://www.usgs.gov/products/data-and-tools/apis
+
+• https://chrome.google.com/webstore/detail/json-formatter/bcjindcccaagfpapjjmafapmmgkkhgoa?hl=en <= JSON Formatter
+
+• https://www.url-encode-decode.com/ <= URL Encode/Decode
+
+• https://oscarotero.com/jquery/ <= JQuery Cheat Sheet
+
+• http://www.greenbeltnow.com/ <= Project Example of Coding Boot Camp >> https://github.com/serenanguyen/GreenbeltNow
+
+### DAY 4 - Oct. 12 (Thu)
+
+• https://codingbootcamp.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=0a6ff062-d487-481d-a00b-24179397badf
+
+• JS: JSON.stringify(object); <= object to string
+
+• JS: string.trim() <= remove the whitespace from the beginning and end of a string
+
+• JS: For event.preventDefault(); in callback function of submit button,
+	<= event.preventDefault() prevents submit button from trying to send a form
+	<= using a submit button instead of a regular button allows the user to hit "Enter" instead of clicking the button if desired
+
+• JQ: $(selector).val(); <= get "value" attribute and put parameter for set
+
+• JQ: To do event binding on dynamically created elements,
+	$(staticAncestors).on(eventName, dynamicChild, function() {});
+	$(document).on( eventName, selector, function(){} );
+
+• HTML:
+	<form>
+		<label for="ID"></label>
+		<input type="text" id="ID"><br>
+	</form>
+
+• HTML+JQ: For embed custom data,
+	<element data-*="somevalue"> <= use the data-* attribute to embed custom data
+	$(selector).data(*) <= access the data-* attribute
+
+• https://app.swaggerhub.com/apis/Bandsintown/PublicAPI/3.0.0 <= Build, Collaborate & Integrate APIs | SwaggerHub
+
+• https://github.com/abhishekbanthia/Public-APIs <= Public-APIs - A public list of APIs from round the web
+
+• https://github.com/toddmotto/public-apis <= public-apis - A collective list of public JSON APIs for use in web development
+
+### DAY 5 - Oct. 13 (Fri)
+
+• https://codingbootcamp.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=91229a38-7be6-4d37-819c-3976f35e00fb
+
+• HTML: In <form> tag, all buttons are regarded as "submit" by default... may need event.preventDefault(); to prevent form from submitting
+
+• The New York Times...
+	https://developer.nytimes.com/signup <= Create a New API Key (4607e93b9f2d447484ff031b194b1b4d)
+	http://developer.nytimes.com/article_search_v2.json <= Article Search API
+
+
+## [WEEK 4]
+
+### DAY 1 - Oct. 16 (Mon)
+
+• https://codingbootcamp.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=697b899a-7376-4574-a99f-7dc1cae6e655
+
+• https://codingbootcamp.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=aed667f8-f9ac-448d-862c-090917fc5196
+
+• https://codingbootcamp.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=8c238f74-1eb8-43f2-af25-41d29559bcd1
+
+• JS: For Client-side Storage, 
+	- (window.)localStorage... 
+		localStorage.clear(); 
+		localStorage.setItem(key, value); 
+		localStorage.getItem(key); 
+	- (window.)sessionStorage... similar to localStorage, but meaningful only if session is valid 
+	- cookie 
+
+• Devtools: Application tab -> Storage <= check client-side storage
+
+• https://firebase.google.com/ <= Firebase... Google’s mobile platform
 
