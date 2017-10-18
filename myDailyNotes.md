@@ -377,3 +377,13 @@
 
 • https://momentjs.com/ <= Parse, validate, manipulate, and display dates and times in JavaScript (cf. .diff(), .format(), .weekday(), etc.)
 
+### DAY 3 - Oct. 18 (Wed)
+
+• https://codingbootcamp.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=035a7247-5af5-4ee6-bcc8-c272a59d9e86
+
+• http://jquery-plugins.net/2017/september <= jQuery Plugins of September 2017
+
+• http://libscore.com/ <= Libscore
+
+• https://jqueryui.com/ <= jQuery UI
+
