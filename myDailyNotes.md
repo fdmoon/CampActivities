@@ -334,7 +334,7 @@
 
 • https://codingbootcamp.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=91229a38-7be6-4d37-819c-3976f35e00fb
 
-• HTML: In <form> tag, all buttons are regarded as "submit" by default... may need event.preventDefault(); to prevent form from submitting
+• HTML: In <form> tag, all buttons are regarded as "submit" by default... may need event.preventDefault() or returning false to prevent form from submitting
 
 • The New York Times...
 	https://developer.nytimes.com/signup <= Create a New API Key (4607e93b9f2d447484ff031b194b1b4d)
@@ -362,4 +362,18 @@
 • Devtools: Application tab -> Storage <= check client-side storage
 
 • https://firebase.google.com/ <= Firebase... Google’s mobile platform
+
+### DAY 2 - Oct. 17 (Tue)
+
+• X
+
+• Firebase: .set() overwrites everything in the specified directory <= use .ref() to store different data in different folders
+
+• Firebase: snapshot.numChildren(); <= count of properties in a folder
+
+• Firebase: firebase.database().ref().on(event, function(snap) {}); <= event... "value", "child_added", etc.
+
+• Firebase: .forEach(function(childsnap) {});
+
+• https://momentjs.com/ <= Parse, validate, manipulate, and display dates and times in JavaScript (cf. .diff(), .format(), .weekday(), etc.)
 

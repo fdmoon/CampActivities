@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+<html lang="en-us">
+
+<head>
+
+  <meta charset="UTF-8">
+  <title>Moment JS Exercises</title>
+
+</head>
+
+<body>
+
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery.js"></script>
+
+  <!-- Link to Moment.js should go here -->
+  <script src="https://cdn.jsdelivr.net/npm/moment@2.19.1/moment.min.js"></script>
+
+  <script>
+    var randomDate = "02/23/1999";
+
+    // Using scripts from moment.js write code below to complete each of the following.
+    // Console.log to confirm the code changes we made worked.
+    var mydate = moment(randomDate);
+
+    // 1 ...to convert the randomDate into three other date formats
+    var aaa = moment(randomDate).format('LLLL');
+    console.log(aaa);
+
+    // 2 ...to determine the time in years, months, days between today and the randomDate
+    console.log(moment().diff(mydate, 'years'));
+    console.log(moment().diff(mydate, 'months'));
+    console.log(moment().diff(mydate, 'days'));
+
+    // 3 ...to determine the number of days between the randomDate and 02/14/2001
+    console.log(moment("02/14/2001").diff(moment(randomDate), 'days'));
+
+    // 4 ...to convert the randomDate to unix time (be sure to look up what unix time even is!!!)
+    console.log(moment(randomDate).format());
+
+    // 5 ...to determine what day of the week and what week of the year this randomDate falls on.
+    var dayOfWeek = ['Sunday', "Monday", "Tuesday", "Wednesday", "Thursday", "Saturday"];
+    console.log(dayOfWeek[moment(randomDate).weekday()]);
+    console.log(moment(randomDate).isoWeek());
+    console.log(moment().isoWeek());
+
+    // If you finish early...
+    // Start creating HTML inputs and then redisplay the dates using moment.js elsewhere on the page.
+  </script>
+
+</body>
+
+</html>
