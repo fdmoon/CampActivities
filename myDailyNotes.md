@@ -387,3 +387,21 @@
 
 • https://jqueryui.com/ <= jQuery UI
 
+• https://trello.com/ <= let the work more collaboratively and get more done
+
+### DAY 4 - Oct. 19 (Thu)
+
+• X
+
+• API_Project.pptx
+
+### DAY 5 - Oct. 20 (Fri)
+
+• X
+
+• No 'Access-Control-Allow-Origin' header is present on the requested resource. Origin 'null' is therefore not allowed access. 
+	<= Cross-Origin Resource Sharing (CORS) 
+	<= Install Google Extention "Moesif Origin & CORS Changer" and Turn On
+	
+• XML can only have one "document entity" or "root".
+
