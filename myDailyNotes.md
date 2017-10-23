@@ -405,3 +405,13 @@
 	
 • XML can only have one "document entity" or "root".
 
+
+## [WEEK 5]
+
+### DAY 1 - Oct. 23 (Mon)
+• X
+
+• CSS: Refer to CSS Extension #1.txt and CSS Extension #2.txt
+
+• http://simurai.com/projects/cursor-monster/ <= What can I do with CSS animations?
+

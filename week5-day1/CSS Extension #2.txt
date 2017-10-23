@@ -1,0 +1,98 @@
+Colors in CSS3 can also be represented as a HSL value. HSL = hue, saturation, lightness.
+First value is 0-360 /*like degress of color wheel*/, second and third are percentage based values. 
+background-color: hsl(170, 70%, 60%);
+
+https://medium.com/@erikdkennedy/7-rules-for-creating-gorgeous-ui-part-1-559d4e805cda
+
+shadow effects can be applied to give 3d like appearance. Take advantage of this to add realism and make the UI seem like a real-life item.
+
+Using black and white first helps with layout, as you’re not distracted by color matching.
+As a bonus, having the main layout black and white will make any added color pop quite well.
+
+
+https://www.youtube.com/watch?v=UMwunYQGvhs
+CSS provides new features like shapes, new color formats, advanced selectors, variables, filters, and blending.
+
+CSS variables still follow the cascade rule. To use css variables, declare your property and value with a —— prefix on a high-level element. Rules further down the cascade can access those values using the var keyword. Example below : 
+
+:root {
+	——myColor : #ABC;
+}
+
+.someOtherClass{
+	background-color: var(——myColor);
+}
+
+You can use multiple var values for any css rule that accepts multiple values. (like gradients)
+
+Css preprocessors have a few limitations compared to css native variables = 
+1. static
+2. doesn’t run in browser
+3. not aware of DOM structure
+
+CSS variables inherit, cascade, and can be scoped to selectors like any other vanilla css rule. And as a bonus, you can update your css rule using JS (setProperty and getPropertyValue).
+
+CSS variables do NOT work in : 
+1. selectors
+2. property names
+3. media query condition expressions
+
+CSS has two blend modes. background-blend-mode and mix-blend-mode. A blend will combine two rules for you. Example below : 
+header{
+	background: linear—gradient(#0904e1,#eef492), url(‘img.jpg’) no-repeat;
+	background-blend-mode: multiply;
+}
+
+The mix-blend is different in that it’ll also work with svg’s and other file types.
+CSS now has backdrop-filter, and it supports photo-shop like syntax and functionality. Here’s a short list : 
+blur
+brightness
+contrast
+drop-shadow
+grayscale
+hue-rotate
+invert
+opacity
+sepia
+saturate
+
+CSS also allows you to use CSS shapes as geometric values. The shapes feature only works on floated elements right now. Do this with the shape-outside key. You can add margin using the shape-margin key. You can use the polygon value to define your own shapes (specify your own x/y coordinates)!
+https://developer.mozilla.org/en-US/docs/Web/CSS/shape-outside
+
+You can use clip-path, which takes the same syntax as shape-outside, to specify a section of an image to modify or hide. Which allows you to specify your own flows. 
+
+YOU CAN BASE CSS RULES FOR CLIP-PATH BASED ON SVG DOM ELEMENTS!!! Example below : 
+
+HTML
+<svg width=“0” height=“0”>
+	<clipPath id=“clipper”>	
+		<polygon points=“…”></polygon>
+	</clipPath>
+</svg>
+
+CSS
+h1{
+	clip-path: url(“#clipper”);
+}
+
+Here’s a website where you can create your own clips! http://bennettfeely.com/clippy/
+
+CSS now also allows you to use Octaldecimal (8 digit Hex) notation to represent RGBA values. #RRGGBBAA
+
+7/8/2017 : 
+color-mod() is an upcoming css feature with no browser support yet. You can choose a base color and simply modify properties of it such as lightness, hue, etc.
+
+:matches is another upcoming pseudo class that functions as syntactic sugar over some existing selectors. Example =
+:matches(.box1, .box2, .box3) .btn {
+	/* Do stuff */
+}; 
+Is the equivalent of = 
+.box1 .btn, .box2 .btn, .box3 .btn, { }
+:matches shares the same functionality previously known as :any()
+:valid and :invalid are also available as pseudo classes now. 
+
+@supports is another experimental feature. Similar to how media queries function, you can use @supports(display:grid){
+	/* if browser supports display:grid, use the rules in this block. You can provide any css rule as an argument*/
+}  
+@supports can accept multiple rules using the ‘and’ keyword to chain () blocks.
+writing-mode is a new option for text direction! 

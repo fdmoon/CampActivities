@@ -1,0 +1,112 @@
+5/5/2017 : 
+CSS has begins-with and ends-with substring selectors for targeting elements. Example:
+
+a[href^=“http://”] {
+	/*css rules  here*/
+}
+
+In the above code, we’re targeting all ‘a’ tags with an href value that begins with “http://”
+Just like the above, you also have an ends-with selector. Just swap out the ‘^’ for a ‘$’
+^ = begins with
+$ = ends with
+* = match any
+blank = match exact
+
+more reading = https://developer.mozilla.org/en-US/docs/Web/CSS/Attribute_selectors
+
+with pseudo-class selectors (like :disabled, :focus, and :checked) , you can target all elements by not specifying an element to target. Example below.
+:disabled {
+	background-color: #ddd;
+} /* will target ALL DISABLED elements on page*/
+
+remember, you can use the ‘sibling’ operator to target multiple elements in a rule. Example below : 
+
+input [type=“checkbox”]:checked + label {
+font-weight:900;
+} /* targets all <imput> tags with type of ‘checkbox’ when checked AND their immediate sibling <label> elements */
+
+quick pseudo selector recap : 
+:first-child
+:last-child
+:only-child
+:empty
+tagName[*,$,^, ,=]
+
+5/7/2017 : 
+nth-child takes a function-like syntax to apply styles. The param will take ‘odd’, ‘even’, a specific child number, or an expression. Example below:
+/* This will target every third element (a value), starting at the 5th element (b value)*/
+:nth0child(3n+5){
+  /*derp*/
+}
+If the ‘a’ value is 1, it can be safely omitted. If the ‘b’ value is 0, you can omit that as well. You can also apply negative values to your expressions.
+
+:nth-of-type will allow you to target specific child elements by type.
+div:nth-of-type(4){
+	/* this will always target the 4th div, regardless of however many non-div child elements exist before it. */
+}
+
+:nth-last-of-type is the same, but starts at the end rather than the beginning.
+
+Bear in mind, div:first-of-type and div:last-of-type are also valid options.
+
+:root will target the root element (usually the <html> tag). This is useful if you don’t have access to the original document.
+
+:target will target the active target of a link element. (the # portion in the URl when href’ing to ID’s) 
+
+div:not(#checkbox){
+	/* will target all div elements that are NOT matching the ID of checkbox */
+} 
+This :not() will accept other pseudo classes as params!
+.col:not(:first-child){
+	/* will target all .col classes EXCEPT the first one */
+}
+
+Pseudo-element targeting is also a nice css feature. first-line and first-letter will allow you to target the first line or letter. This is nice because it first-line will scale, and adapt to whatever the line length happens to be at that viewport size. First letter is often used for drop caps.
+
+pseudo elements may be written with either two colons or one. Two is commonly used to distinguish between a pseudo class and a pseudo element.
+
+::before and ::after are pseudo elements. They’re considered ‘generated content’, and allow an additional, style-able element before and/or after a targeted element. THIS REQUIRES THE USE OF THE CONTENT KEY/ATTRIBUTE. Example below : 
+
+.jpg::before{
+	content: url(jpg-icon.jpg);
+	width:40px;
+}
+
+These pseudo elements can be used for things like bullet-points on a list as well.
+The content property will also allow you to pull any attribute value for that html element. Example : 
+#thumbnail::before{
+	content: attr(alt)
+} /* This will take the alt attribute and display it as text before the thumbnail */
+
+One thing to keep in mind, the before and after pseudo classes are appended as child elements. They are still confined within the outer bounds of the box itself.
+
+NEW CSS FEATURES
+filter(/*FilterName (% of original filter to apply), opacity(%), blur(px), hue-rotate(deg), drop-shadow(x-offset,y-offset,blur,color) Drop-shadow works like box-shadow*/) example below : 
+img{
+	-webkit-filter: sepia(50%); /* webkti prefix may or may not be necessary depending on your browser */
+} 
+
+calc() allows for the use of mathematical expressions to mix-match sizing units. Example below : 
+.wrapper {
+	width: -webkit-calc(50% -  50px); /*will always be 50px left of the middle*/
+}
+
+multi column layout! Similar to flexbox in that is provides a lot of layout flexibility, the difference is that it is designed for text layout and text columns. It simply flows the text content into multiple columns within the same element box. Example below : 
+
+#bigBlockOText{
+	-webkit—column-count: 4;
+	—webkit-column-gap: 3em;
+	-webkit-column-rule: 1px dotted black;
+	-webkit-column-width: 200px; /* acts as a max-width. Column count will reduce instead of exceeding size */
+};
+
+Alternatively, there is a property that allows a specific element to span multiple columns.
+
+#h2InsideBlockOText{
+	—webkit-column-span:all;
+}
+
+CSS is no longer versioned as a whole. It’s versioned by module to allow for faster production and specification change. The version number of a particular feature has no co-relation to whatever version of css it’s in.
+
+calc() is a css function that performs mathematical calculations and returns a result. You can use *, +, -, and /
+

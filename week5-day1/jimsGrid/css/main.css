@@ -1,0 +1,288 @@
+/* ---------- 1: Global setup ---------- */
+/* ---------- 1.1: Fonts --------- */
+/* NOTE: DO NOT USE Gigi-Regular it is the worst font ever created, this is just for example */
+@font-face {
+	font-family:'Gigi-Regular';
+	src: url('../fonts/Gigi-Regular_gdi.eot');
+	src: url('../fonts/Gigi-Regular_gdi.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/Gigi-Regular_gdi.woff') format('woff'),
+		url('../fonts/Gigi-Regular_gdi.ttf') format('truetype'),
+		url('../fonts/Gigi-Regular_gdi.svg#Gigi-Regular') format('svg');
+	font-weight: 400;
+	font-style: normal;
+	font-stretch: normal;
+	unicode-range: U+0020-25CA;
+}
+/* ------ 1.2: General Styles ------- */
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0px;
+  border: 0px;
+}
+body {
+  background: #fff;
+  height: 100%;
+  font-family: Arial, sans-serif;
+  color: #505050;
+  font-size: 100%;
+  font-weight: 200;
+}
+fieldset {
+  border: none;
+  padding: 0px;
+}
+a img {
+  border: none;
+}
+a {
+  color: #0085ad;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+  color: #a6a6a6;
+}
+p {
+  margin: 0 0 11px 0;
+  font-family: Times New Roman, serif;
+}
+h3 {
+  font-size: 1.25em;
+  color: black;
+  font-family: Arial, sans-serif;
+  text-transform: uppercase;
+}
+
+
+
+/* ---------- 3: Grid ---------- */
+.container {
+  width: 100%;
+  max-width: 1600px;
+  margin: 0 auto;
+  line-height: 0em;
+  overflow: hidden;
+}
+.containerCont {
+  /*padding: 0 10px;*/
+  padding: 0 1.5%;
+}
+.col {
+  float: left;
+  overflow: hidden;
+}
+.container img {
+  max-width: 100%;
+}
+.colCont {
+  margin-left: 1.5em;
+  line-height: 1.2em;
+  position: relative;
+}
+
+.row {
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+.row.showGrid .col {
+  padding-bottom: 20px;
+  min-height: 30px;
+}
+.c1 {
+  width: 8.333333333%;
+}
+.c2 {
+  width: 16.666666667%;
+}
+.c3 {
+  width: 25%;
+}
+.c4 {
+  width: 33.333333333%;
+}
+.c5 {
+  width: 41.666666667%;
+}
+.c6 {
+  width: 50%;
+}
+.c7 {
+  width: 58.333333333%;
+}
+.c8 {
+  width: 66.666666667%;
+}
+.c9 {
+  width: 75%;
+}
+.c10 {
+  width: 83.333333333%;
+}
+.c11 {
+  width: 91.666666667%;
+}
+.c12 {
+  width: 100%;
+}
+/* ---------- 4: Navigation ---------- */
+#navNav {
+  list-style: none;
+  /*padding: 0;*/
+  margin: 0;
+  float:right;
+  line-height:normal;
+}
+#navNav li {
+  font-size: 0.8125em;
+  letter-spacing: 1.5px;
+  float: right; 
+  padding: 0 5px 0 0 ;
+  background-color:#996B96;
+}
+#navNav li.last {padding-right:0px !important;}
+#navNav ul {padding:0; margin:0;}
+#navNav li a {
+   color: #996B96;
+  text-decoration: none;
+    background-color:#E1E2D7;
+
+}
+#navNav li a:hover {
+  background-color: #A2A392;
+}
+/* ---------- 5: Main Body Content ---------- */
+/* ---------- 5.1 Modal ----------- */
+.modal:before {
+  content: "";
+  display: none;
+  background: rgba(0, 0, 0, 0.6);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10;
+}
+.modal:target:before {
+  display: block;
+}
+.modal:target .modal-dialog {
+  -webkit-transform: translate(0, 0);
+  -ms-transform: translate(0, 0);
+  transform: translate(0, 0);
+  top: 10%;
+  bottom:10%;
+  overflow-y:scroll;
+}
+.modal-dialog {
+  background: #fefefe;
+  border: #333333 solid 1px;
+  border-radius: 5px;
+  margin-left: -200px;
+  position: fixed;
+  left: 25%;
+  top: -100%;
+  z-index: 600;
+  width: 80%;
+  -webkit-transform: translate(0, -500%);
+  -ms-transform: translate(0, -500%);
+  transform: translate(0, -500%);
+  -webkit-transition: -webkit-transform 0.3s ease-out;
+  -moz-transition: -moz-transform 0.3s ease-out;
+  -o-transition: -o-transform 0.3s ease-out;
+  transition: transform 0.3s ease-out;
+}
+.modal-body {
+  padding: 20px;
+}
+.modal-header,
+.modal-footer {
+  padding: 10px 20px;
+}
+.modal-header {
+  border-bottom: #eeeeee solid 1px;
+}
+.modal-header h2 {
+  font-size: 20px;
+}
+.modal-footer {
+  border-top: #eeeeee solid 1px;
+  text-align: right;
+}
+#close {
+  display: none;
+}
+/* ---------- 5.2 Other Body Styles ----------- */
+
+
+
+/* ---------- 6: Media Selectors ---------- */
+
+/* Smartphones (portrait and landscape) ----------- */
+
+@media only screen and (min-width: 320px) and (max-width: 568px) {
+  .col {
+    width: 100%;
+	}
+  .moble {
+    display:block;
+	}
+  .mobileHide {
+    display: none;
+	}
+  .colCont {
+    margin-left: 0;
+    line-height: 1.2em;
+    position: relative;
+  }
+}
+/* Smartphones (landscape) ----------- */
+
+@media only screen and (min-width: 321px) {
+
+}
+/* Smartphones (portrait) ----------- */
+
+@media only screen and (max-width: 320px) {
+
+}
+
+/* iPads (portrait and landscape) ----------- */
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  .container {
+    max-width: 97%;
+	}
+
+}
+/* iPads (landscape) ----------- */
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+
+}
+/* iPads (portrait) ----------- */
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+
+}
+
+@media only screen and (max-width: 1023px/*,
+only screen and	(max-device-width :800px)*/) {
+  /* Styles */
+  
+ 
+}
+/* one HD query to rule them all... or so i hope ----------- */
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) {
+
+}
+@media only screen and (min-resolution: 192dpi) {
+
+}
+@media only screen and (max-device-width: 1280px) {
+
+}
