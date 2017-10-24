@@ -415,3 +415,7 @@
 
 • http://simurai.com/projects/cursor-monster/ <= What can I do with CSS animations?
 
+DAY 2 - Oct. 24 (Tue)
+
+• X
+

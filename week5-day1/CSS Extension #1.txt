@@ -23,7 +23,7 @@ remember, you can use the ‘sibling’ operator to target multiple elements in 
 
 input [type=“checkbox”]:checked + label {
 font-weight:900;
-} /* targets all <imput> tags with type of ‘checkbox’ when checked AND their immediate sibling <label> elements */
+} /* targets all <input> tags with type of ‘checkbox’ when checked AND their immediate sibling <label> elements */
 
 quick pseudo selector recap : 
 :first-child
