@@ -69,8 +69,8 @@
 • https://www.sessions.edu/color-calculator/ <= color codes
 
 • Web Hosting via GitHub:
-	Basic.. repo-name = username.github.io >> https://username.github.io
-	Advanced.. https://username.github.io/other-repo-name <= where, other-repo-name is connected to "gh-pages" branch of that repository
+	Basic... repo-name = username.github.io >> https://username.github.io
+	Advanced... https://username.github.io/other-repo-name <= where, other-repo-name is connected to "gh-pages" branch of that repository
 
 ### DAY 4 - Sep. 28 (Thu)
 
@@ -415,7 +415,19 @@
 
 • http://simurai.com/projects/cursor-monster/ <= What can I do with CSS animations?
 
-DAY 2 - Oct. 24 (Tue)
+### DAY 2 - Oct. 24 (Tue)
 
 • X
+
+### DAY 3 - Oct. 25 (Wed)
+
+• https://codingbootcamp.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=cf0cf648-a487-4ad2-ab8c-156629f69478
+
+• Node.js: process.argv <= "Array" of command line arguments ([2] ~)
+
+• Node.js: process.env <= "Class" of environment variables
+
+• Node.js: For modularization, 
+	"E"xport party... module.exports = {} 
+	"I"mport party... require("");
 

@@ -1,0 +1,69 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	position: relative;
+}
+
+body:after {
+	content : "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	/*background-image: url(../images/choicr_background.jpg);*/
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	width: 100%;
+	min-height: 100%;
+	opacity : 0.3;
+	z-index: -1;
+}
+
+h1 {
+	font-family: 'Monoton', cursive;
+}
+
+div {
+	word-wrap: break-word;
+}
+
+.jumbotron {
+	color: #fff;
+	padding: 15px 15px;
+	margin-bottom: 20px;
+	background-image: url(../images/choicr_jumbotron.jpg);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;	
+}
+
+.col-md-6 {
+	padding-left: 0;
+	padding-right: 0;
+}
+
+#amazon-heading {
+	background-color: #333F48;
+}
+
+#goodzer-heading {
+	background-color: #333F48;
+}
+
+.item-img {
+	float: right;
+}
+
+.clearfix::after {
+	content: "";
+	display: block;
+	clear: both;
+}
+
+#googlemap {
+	width: 100%;
+	height: 200px;
+	z-index: 1;	
+}
+
