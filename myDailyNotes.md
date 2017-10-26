@@ -431,3 +431,26 @@
 	"E"xport party... module.exports = {} 
 	"I"mport party... require("");
 
+### DAY 4 - Oct. 26(Thu)
+
+• https://codingbootcamp.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=8277276f-f325-457c-bf3f-32a5298485e2
+
+• Node.js: var fs = require("fs"); <= "fs" is a core node package for reading and writing files... 
+	fs.writeFile(file, data, function(err) {}); 
+	fs.readFile(file, 'utf8', function(err, data) {}); 
+		<= no 'utf8' means to get "raw" data (cf. .toString();)
+
+• Node.js: "npm" stands for node package manager... 
+	> npm install <package_name> <= A package can be downloaded with the command 
+	https://docs.npmjs.com/getting-started/installing-npm-packages-locally
+
+• JS: JSON.parse(str); <= str to a JavaScript object
+
+• JS: floatValue.toFixed(n); <= "n" decimal numbers after a dot
+
+• https://nodejs.org/api/fs.html <= Node.js v8.8.1 Documentation
+
+• https://www.npmjs.com/ <= npm is the package manager for JavaScript and the world’s largest software registry
+
+• https://www.upwork.com/ <= Get more done with freelancers
+
