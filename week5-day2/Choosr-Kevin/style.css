@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css?family=Yantramanav:100');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400');
+@import url('https://fonts.googleapis.com/css?family=Raleway:200');
+
+html, body {
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	width: 100%;
+}
+
+.intro {
+	height: 100%;
+	width: 100%;
+	margin: auto;
+	background-image: url(./images/smallbiz_background.png);
+	display: table;
+	top: 0;
+	background-size: cover;
+}
+
+.intro .inner {
+	display: table-cell;
+	vertical-align: middle;
+	width: 100%;
+	max-width: none;
+}
+
+.content {
+	max-width: 700px;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.content h1 {
+	font-family: 'Yantramanav', san serif;
+	font-size: 600%;
+	font-weight: bold;
+	letter-spacing: 2px;
+	color: #e1efe9;
+	line-height: 70%;
+}
+
+.btn {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 135%;
+	font-weight: 400%;
+	color: #3a6168;
+	text-transform: uppercase;
+	text-decoration: none;
+	border: solid #3a6168;
+	padding: 10px 20px;
+	border-radius: 8px;
+}
+
+.btn:hover {
+	color: #fff;
+	border: solid #fff 2px;
+	transition: all 0.6s;
+}
+
+p {
+	font-size: 150%;
+	line-height: 200%;
+	font-family: sans-serif;
+	padding: 20px 25px;
+}
+
+#intro-text {
+	color: #f0f7f4;
+	font-size: 110%;
+	font-weight: 200;
+	letter-spacing: 2px;
+	font-family: 'raleway', sans-serif;
+}
+/*--- Search Bar Styling ---*/
+
+.home-style {
+/* background: url(../images/home.jpg) no-repeat center top fixed;*/
+/*background-size*/
+-moz-background-size: cover;
+-moz-background-size: cover;
+-webkit-background-size: cover;
+-o-background-size: cover;
+background-size: cover;
+width: 100%;
+overflow: hidden;
+}
+
+
+.overlay-startup {
+background-color: rgba(0, 0, 0, 0.4);
+/* background-image: url(../images/dots.png);*/
+width: 100%;
+min-height: 800px;
+}
+
+.home-search {
+background: rgba(0, 0, 0, 0.2);
+margin-bottom: 135px;
+margin-top: 35px;
+}
+
+.home-search .search-input {
+width: 65%;
+margin-top: 20px;
+margin-bottom: 20px;
+margin-left: 20px;
+height: 60px;
+border-radius: 3px;
+font-size: 16px;
+box-shadow: inherit;
+margin-right: 0;
+}
+
+.home-search .btn-lg {
+padding: 18px 30px;
+font-size: 16px;
+width: 28%;
+margin-right: 20px;
+}
+
+
+/*--- Media Queries --*/
+/*@media screen and (max-width: 900px) {
+	.content {
+		padding-bottom: 45%;
+	}
+	.content h1 {
+		font-size: 450%;
+	}
+	.btn {
+		font-size: 110%;
+		padding: 9px 17px;
+	}
+}
+@media screen and (max-width: 768px) {
+	.content {
+		padding-bottom: 35%;
+	}
+	.content h1 {
+		font-size: 300%;
+	}
+	.btn {
+		font-size: 110%;
+		padding: 9px 17px;
+	}
+}
+@media screen and (max-width: 480px) {
+		.content {
+		padding-bottom: 20%;
+	}
+	.content h1 {
+		font-size: 300%;
+	}
+	.btn {
+		font-size: 80%;
+		padding: 4px 10px;
+	}
+}*/
