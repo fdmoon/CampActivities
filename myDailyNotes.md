@@ -454,3 +454,36 @@
 
 • https://www.upwork.com/ <= Get more done with freelancers
 
+### DAY 5 - Oct. 27 (Fri)
+
+• https://codingbootcamp.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=72421887-c4f6-4641-a7e8-520376b8f240
+
+• Node.js: To specify npm dependencies of the app, use "package.json"... 
+	> npm init <= how to make package.json 
+	> npm <new_package> --save <= to add it to dependencies in package.json 
+	{ 
+		"name": "app-name",		// app's name 
+		"version": "1.0.0",		// app's version 
+		"description": "",		// app's description 
+		"main": "app.js",		// app's entry point 
+		"scripts": { 
+			"test": "echo \"Error: no test specified\" && exit 1" 
+		}, 
+		"keywords": [], 
+		"author": "", 
+		"license": "ISC", 
+		"dependencies": {		// *** npm dependency list *** 
+			"weather-js": "^2.0.0" 
+		} 
+	} 
+	> npm install <= in case of having package.json
+
+• Heroku: 
+	Heroku is a platform as a service (PaaS) that enables developers to build, run, and operate applications entirely in the cloud 
+	For Heroku Command Line Interface (CLI), use Command Prompt (not Git Bash)
+
+• Heroku: To Deploy a Static Site to Heroku, create index.php file with one line of PHP code... 
+	<?php header( 'Location: /index.html' ); ?>
+
+• https://www.npmjs.com/browse/depended <= most depended-upon packages
+

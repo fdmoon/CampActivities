@@ -1,0 +1,20 @@
+{
+  "name": "weatherdest",
+  "version": "1.0.0",
+  "description": "gather weather data and address information",
+  "main": "weatherdest.js",
+  "dependencies": {
+    "geocoder": "^0.2.3",
+    "weather-js": "^2.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \\\"Error: no test specified\\\" && exit 2"
+  },
+  "keywords": [
+    "Weather",
+    "Zip"
+  ],
+  "author": "Coding Boot Camp",
+  "license": "ISC"
+}

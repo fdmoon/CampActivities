@@ -1,0 +1,15 @@
+{
+  "name": "inquirer_geocode",
+  "version": "1.0.0",
+  "description": "",
+  "main": "inquirerGeocode.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "geocoder": "^0.2.3",
+    "inquirer": "^3.3.0"
+  }
+}
