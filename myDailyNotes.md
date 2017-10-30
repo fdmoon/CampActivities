@@ -482,8 +482,40 @@
 	Heroku is a platform as a service (PaaS) that enables developers to build, run, and operate applications entirely in the cloud 
 	For Heroku Command Line Interface (CLI), use Command Prompt (not Git Bash)
 
-• Heroku: To Deploy a Static Site to Heroku, create index.php file with one line of PHP code... 
-	<?php header( 'Location: /index.html' ); ?>
+• Heroku: How to deploy with Git... 
+	1) go to a local Git repository 
+	2) create a Heroku remote 
+		> heroku create <unique_name> 
+		> git remote -v 
+	3) deploy code 
+		> git push heroku master 
+	4) visit https://unique_name.herokuapp.com/
+
+• Heroku: To Deploy a Static Site to Heroku, 
+	create index.php file with one line of PHP code... 
+		<?php header( 'Location: /index.html' ); ?> 
+	> heroku buildpacks:set heroku/php <= before deploying code
 
 • https://www.npmjs.com/browse/depended <= most depended-upon packages
+
+
+## [WEEK 6]
+
+### DAY 1 - Oct. 30 (Mon)
+
+• https://codingbootcamp.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=8883d390-4a5d-4f2e-8613-3c067a72d3da
+
+• JS: Basically, let something done using "asynchronous" callbacks
+
+• Node.js: process.exit(); <= terminate the process
+
+• Node.js: Regarding NPM packages, 
+	use the NPM page for that package to get instructions on how to use it 
+	use the README.md file inside the actual NPM package in the node modules folder
+
+• https://www.npmjs.com/package/inspect-process <= Dead simple debugging for node.js using chrome-devtools 
+	> npm install -g inspect-process <= "-g" means installed in the folder where there is node.exe and can be used everywhere 
+	> inspect <target.js> <arguments...> <= put "debugger;" code at the line where you want to make a break point in .js file
+
+• https://nodejs.org/api/debugger.html#debugger_v8_inspector_integration_for_node_js <= The V8 inspector integration for Node.js is an experimental feature that is still a work in process. Check out the following documentation from the Node.js website for further reading "V8 Inspector Integration for Node.js."
 
