@@ -505,7 +505,7 @@
 
 • https://codingbootcamp.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=8883d390-4a5d-4f2e-8613-3c067a72d3da
 
-• JS: Basically, let something done using "asynchronous" callbacks
+• JS: Basically, let something done using "asynchronous" callbacks <= JS has "asynchronous" nature!
 
 • Node.js: process.exit(); <= terminate the process
 
@@ -518,4 +518,10 @@
 	> inspect <target.js> <arguments...> <= put "debugger;" code at the line where you want to make a break point in .js file
 
 • https://nodejs.org/api/debugger.html#debugger_v8_inspector_integration_for_node_js <= The V8 inspector integration for Node.js is an experimental feature that is still a work in process. Check out the following documentation from the Node.js website for further reading "V8 Inspector Integration for Node.js."
+
+### DAY 2 - Oct. 31 (Tue)
+
+• https://codingbootcamp.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=e336f613-865a-4f85-b9a8-92810507304a
+
+• JS: Object.prototype.xxx = ooo; <= how to add properties or functions to the pre-defined Object
 
