@@ -525,3 +525,10 @@
 
 • JS: Object.prototype.xxx = ooo; <= how to add properties or functions to the pre-defined Object
 
+### DAY 3 - Nov. 1 (Wed)
+• https://codingbootcamp.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=dcaac0fc-7b94-45bc-8365-c7bee5793c9f
+
+• Function Declaration/Statement vs. Function Expression... 
+	. function Constructor(...) {} <= Function declaration/statement will be hoisted (you can invoke the function before this code and it will run) 
+	. var Constructor = function(...) {} <= Function expression will not be hoisted (if you invoke the function before this code, you will get an error, "add is not a function")
+
