@@ -1,5 +1,4 @@
 var WeatherAdmin = require("./weatheradmin.js");
-var UserSearch = require("./usersearch.js");
 
 var user = process.argv[2];
 var name = process.argv[3];
@@ -15,10 +14,6 @@ if(user === "Admin") {
 	admin.getData();
 }
 else if(user === "user") {
-	var userObj = new UserSearch(name, location);
-	userObj.getWeather();
-
-	var str = "Name: " + userObj.name + " Location: " + userObj.location + " Date: " + userObj.date + "\n";
-	admin.setData(str);
+	admin.newUserSearch(name, location);
 }
 

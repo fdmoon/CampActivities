@@ -532,3 +532,12 @@
 	. function Constructor(...) {} <= Function declaration/statement will be hoisted (you can invoke the function before this code and it will run) 
 	. var Constructor = function(...) {} <= Function expression will not be hoisted (if you invoke the function before this code, you will get an error, "add is not a function")
 
+### DAY 4 - Nov. 2 (Thu)
+• https://codingbootcamp.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=c872de31-0046-4ab8-87c6-8e38a055b96f
+
+• MySQL Workbench: SCHEMAS = DATABASES
+
+• https://wordpress.com/ <= Build your perfect site with WordPress.com
+
+• https://gist.github.com/hofmannsven/9164408 <= Simply MySQL Command Line Cheatsheet
+

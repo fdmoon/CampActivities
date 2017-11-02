@@ -1,7 +1,12 @@
 var fs = require("fs");
+var UserSearch = require("./usersearch.js");
 
 var WeatherAdmin = function() {
-	this.setData = function(str) {
+	this.newUserSearch = function(name, location) {
+		var userObj = new UserSearch(name, location);
+		userObj.getWeather();
+
+		var str = "Name: " + userObj.name + " Location: " + userObj.location + " Date: " + userObj.date + "\n";
 		fs.appendFile("log.txt", str, function(err) {
 			if (err) {
 				return console.log("Error: " + err);
@@ -19,3 +24,4 @@ var WeatherAdmin = function() {
 }
 
 module.exports = WeatherAdmin;
+
