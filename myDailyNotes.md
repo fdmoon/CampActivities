@@ -541,3 +541,23 @@
 
 • https://gist.github.com/hofmannsven/9164408 <= Simply MySQL Command Line Cheatsheet
 
+### DAY 5 - Nov. 3 (Fri)
+
+• https://codingbootcamp.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=ee0c9d2c-6a6c-4f30-bea0-e0b6b58b25aa
+
+• https://codingbootcamp.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=904959d9-f740-480a-9ed6-3ad78fa649de
+
+• https://www.npmjs.com/package/colors <= get colors in your node.js console
+
+• https://www.npmjs.com/package/mysql <= MySQL package to read data from a MySQL database
+
+• https://www.npmjs.com/package/cli-table <= Pretty unicode tables for the CLI
+
+• https://guides.github.com/features/mastering-markdown/ <= GitHub Guides - Mastering Markdown
+
+• https://css-tricks.com/examples/ShapesOfCSS/
+
+• http://www.goodnet.org/articles/what-are-top-7-skilled-volunteering-organizations <= What are the Top 7 Skilled Volunteering Organizations?
+
+• https://www.mockplus.com/blog/post/ux-designer-interview-questions/?r=vincent <= 12 UX Designer Interview Questions to Help You Pass the Interview
+
