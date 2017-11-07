@@ -561,3 +561,16 @@
 
 • https://www.mockplus.com/blog/post/ux-designer-interview-questions/?r=vincent <= 12 UX Designer Interview Questions to Help You Pass the Interview
 
+
+## [WEEK 7]
+
+### DAY 1 - Nov. 6 (Mon)
+
+• https://codingbootcamp.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=11d9eff7-b237-411d-89de-2231ec70f824
+
+• MySQL Workbench: Use Export/Import button in Result Grid to export to an external file or to import from an external file
+
+• https://medium.com/@obamaneverforget/10-useful-tricks-for-javascript-517f55839a2a <= 10 Useful Tricks for JavaScript
+
+• https://atech.blog/viaduct/mysql-indexes-primer <= MySQL Indexing Explained
+
