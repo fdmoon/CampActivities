@@ -574,3 +574,50 @@
 
 • https://atech.blog/viaduct/mysql-indexes-primer <= MySQL Indexing Explained
 
+### DAY 2 - Nov. 7 (Tue)
+
+• https://codingbootcamp.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=ca75bfb0-6dff-4395-8045-990841bd03d3
+
+• Server-side(Back-End): MySQL - Node.js/Express.js - Handlebars
+
+• https://www.npmjs.com/package/nodemon <= nodemon will watch the files in the directory in which nodemon was started, and if any files change, nodemon will automatically restart your node application 
+	> npm install -g nodemon 
+	> nodemon <filename.js>
+
+• https://www.getpostman.com/ <= Postman makes developing APIs easy (cf. Postman - Chrome Extension)
+
+• https://products.office.com/en-us/student/office-in-education <= Get a free plan of Office 365 for Education if having a student email (ex. daekeun.moon@g.austincc.edu)
+
+### DAY 3 - Nov. 8 (Wed)
+
+• https://codingbootcamp.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=ed204988-3c47-4997-9683-42076114636d
+
+• https://codingbootcamp.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=9dcc3cbc-94d6-4304-b502-caf8681c58de
+
+• JS: Array is one of objects!!! -> can be treated as JSON data
+
+• Express.js: Web framework (= kind of API) for Node.js to make creating code for server much simpler 
+	var express = require("express"); 
+	var app = express(); 
+	...
+
+• Express.js: "/:para" <= how to create a variable from query URL 
+	Usage... req.params.para 
+	Extension... /:para1/:para2/:para3...
+
+• Express.js: "/:para?" <= "?" means it might be included or might not be included (cf. In case that parameter conditions are collased, the running priority depends on order of code)
+
+• Express.js: To parse incoming request bodies in a middleware before your handlers, available under the req.body property 
+	var bodyParser = require("body-parser"); 
+	// Sets up the Express app to handle data parsing 
+	app.use(bodyParser.urlencoded({ extended: false })); 
+	app.use(bodyParser.json()); 
+	cf. at HTML (use event.preventDefault(); in <form> tag), 
+		$.post("route_name", req.body).done(function(data) {});
+
+• Express.js: To provide utilities for working with file and directory paths 
+	var path = require("path"); 
+	ex. res.sendFile(path.join(__dirname, "view.html"));
+
+• https://dev.to/hawkinjs/dont-fear-the-regex-a-practical-introduction-to-regular-expressions <= The Regex: A Practical Introduction to Regular Expressions
+

@@ -49,5 +49,3 @@ SELECT * FROM topAlbums;
 
 TRUNCATE TABLE topAlbums;
 
--- select * from topalbums inner join top5000 on topalbums.artist = top5000.artist and topalbums.artist = 'The Beatles';
-

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>test</title>
+
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+
+<body>
+	<div class="container">
+		<div class="row">
+			<section class="col-md-8">
+				<h2>Contact</h2>
+				<hr>
+
+				<form action="/form-post" method="POST">
+					<div>
+						<p>Name</p>
+						<input class="inbox" type="text" name="name" placeholder="John Smith" value="">
+						<p>Email</p>
+						<input class="inbox" type="email" name="email" placeholder="example@gmail.com" value="">
+						<p>Message</p>
+						<textarea class="inbox" name="msg" rows="5" maxlength="400"></textarea>
+					</div>
+					<br>
+					<input id="subbtn" type="submit" value="Submit">
+				</form>
+			</section>
+			<section class="col-md-4">
+				<button id="POST">POST</button>	
+			</section>
+		</div>
+	</div>
+
+	<script>
+		$("#POST").on("click", function() {
+
+		    var queryURL = "http://localhost:8080/postdata";
+
+		    alert(queryURL);
+
+		    $.ajax({
+				url: queryURL,
+				method: "POST"
+		    }).done(function(response) {
+				console.log(response);
+				console.log(response.Runtime);
+		    });		
+		})
+	</script>	
+</body>
+
+</html>
+
