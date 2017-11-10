@@ -18,7 +18,7 @@ app.use(bodyParser.json());
 
 // Star Wars Characters (DATA)
 // =============================================================
-var characters = require("./characters.js")
+var characters = require("./characters.js");
 // var characters = [
 //   {
 //     routeName: "yoda",

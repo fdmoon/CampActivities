@@ -621,3 +621,44 @@
 
 • https://dev.to/hawkinjs/dont-fear-the-regex-a-practical-introduction-to-regular-expressions <= The Regex: A Practical Introduction to Regular Expressions
 
+### DAY 4 - Nov. 9 (Thu)
+
+• https://codingbootcamp.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=3987ab2c-1030-4983-bd43-ddec56683a65
+
+• https://www.16personalities.com/personality-types <= PERSONALITY TYPES READ ABOUT OUR FRAMEWORK
+
+### DAY 5 - Nov. 10 (Fri)
+
+• https://codingbootcamp.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=fde3f0ad-35d7-496a-8b1e-9a7559e50b67
+
+• Express.js: How to respond... 
+	app.get("action_URL", function(request, response) { 
+		response.send(html_string); 
+		response.json(json_data); 
+		response.sendFile(file_name); 
+		response.redirect("get_URL"); 
+	}
+
+• Express.js: handlebars... 
+	. http://handlebarsjs.com/ 
+	. Usage... 
+		var exphbs = require("express-handlebars"); 
+		// Set Handlebars as the default templating engine. 
+		app.engine("handlebars", exphbs({ defaultLayout: "main" })); 
+		app.set("view engine", "handlebars"); 
+		// Make html page. 
+		response.render("handlebars_name", variables); 
+	. Directories... 
+		".\views\layouts\"main.handlebars <= master page 
+		".\views\"*.handlebars <= sub-html inside master page 
+	. Basics... 
+		A handlebars expression is a {{, some contents, followed by a }}. (ex. {{{ body }}}) 
+		Handlebars HTML-escapes values returned by a {{expression}}. If you don't want Handlebars to escape a value, use the "triple-stash", {{{. (ex. {{ statement and/or variable }})
+
+• https://stackoverflow.com/questions/31651992/grails-interpreting-posted-json-data-incorrectly-by-adding-brackets-to-the-ke <= Grails interpreting posted JSON data incorrectly by adding brackets [] to the keys of the object 
+	if (typeof jQuery !== 'undefined') { 
+		jQuery.ajaxSettings.traditional = true; 
+	}
+
+• http://www.restapitutorial.com/lessons/whatisrest.html <= What is REST?
+
