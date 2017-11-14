@@ -662,3 +662,35 @@
 
 • http://www.restapitutorial.com/lessons/whatisrest.html <= What is REST?
 
+
+## [WEEK 8]
+
+### DAY 1 - Nov. 13 (Mon)
+
+• https://codingbootcamp.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=9baa7aef-627e-43f0-867d-9aa8eebe4ade
+
+• JQ: $("[attribute_name=value]"); <= attribute selector
+
+• JQ: location.assign("/"); <= another way to go to a specific page
+
+• Express.js: To set the default starting directory of express, 
+	app.use(express.static("directory_name"));
+
+• MySQL: How to set primary key and foreign key... 
+	PRIMARY KEY (key_col_name) 
+	FOREIGN KEY (key_col_name) REFERENCES table_name(col_name)
+
+• ORM: Object Relational Mapping (ORM) is the process of mapping between objects and relational database systems...
+
+• JS's asynchronous nature -> can't guarantee execution order of app -> consider using your own callback function as a parameter
+
+• Sequelize is a promise-based ORM for Node.js v4 and up. It supports the dialects PostgreSQL, MySQL, SQLite and MSSQL and features solid transaction support, relations, read replication and more.
+
+• MVC: Model (ex. ORM) - View (ex. express-handlebars) - Controller (ex. router in server.js) 
+	https://basicsofwebdevelopment.files.wordpress.com/2015/01/mvc-process-svg.png
+
+• https://stackoverflow.com/questions/30457086/what-is-the-difference-between-single-and-double-question-mark-in-n <= What is the difference between single ( ? ) and double question mark ( ?? ) in node-mysql? 
+	?? is used for table and column names, it escapes them with backticks. ? is for ordinary values.
+
+• https://medium.freecodecamp.org/model-view-controller-mvc-explained-through-ordering-drinks-at-the-bar-efcba6255053 <= Model-View-Controller (MVC) Explained Through Ordering Drinks At The Bar
+
