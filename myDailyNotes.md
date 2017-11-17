@@ -611,9 +611,12 @@
 	var bodyParser = require("body-parser"); 
 	// Sets up the Express app to handle data parsing 
 	app.use(bodyParser.urlencoded({ extended: false })); 
-	app.use(bodyParser.json()); 
+	app.use(bodyParser.json()); <= received <form> data to json by default 
 	cf. at HTML (use event.preventDefault(); in <form> tag), 
-		$.post("route_name", req.body).done(function(data) {});
+		$.post("route_name", req.body).done(function(data) {}); 
+	cf. app.use(bodyParser.urlencoded({ extended: true })); 
+		app.use(bodyParser.text()); 
+		app.use(bodyParser.json({ type: "application/vnd.api+json" }));
 
 • Express.js: To provide utilities for working with file and directory paths 
 	var path = require("path"); 
@@ -640,7 +643,7 @@
 	}
 
 • Express.js: handlebars... 
-	. http://handlebarsjs.com/ 
+	. http://handlebarsjs.com/ (cf. Built-In Helpers) 
 	. Usage... 
 		var exphbs = require("express-handlebars"); 
 		// Set Handlebars as the default templating engine. 
@@ -678,7 +681,7 @@
 
 • MySQL: How to set primary key and foreign key... 
 	PRIMARY KEY (key_col_name) 
-	FOREIGN KEY (key_col_name) REFERENCES table_name(col_name)
+	FOREIGN KEY (my_col_name) REFERENCES you_table_name(you_col_name)
 
 • ORM: Object Relational Mapping (ORM) is the process of mapping between objects and relational database systems...
 
@@ -687,10 +690,77 @@
 • Sequelize is a promise-based ORM for Node.js v4 and up. It supports the dialects PostgreSQL, MySQL, SQLite and MSSQL and features solid transaction support, relations, read replication and more.
 
 • MVC: Model (ex. ORM) - View (ex. express-handlebars) - Controller (ex. router in server.js) 
-	https://basicsofwebdevelopment.files.wordpress.com/2015/01/mvc-process-svg.png
+	https://basicsofwebdevelopment.files.wordpress.com/2015/01/mvc-process-svg.png 
+	https://book.cakephp.org/2.0/en/_images/basic_mvc.png 
+	My-MVC-Understanding.docx
 
 • https://stackoverflow.com/questions/30457086/what-is-the-difference-between-single-and-double-question-mark-in-n <= What is the difference between single ( ? ) and double question mark ( ?? ) in node-mysql? 
 	?? is used for table and column names, it escapes them with backticks. ? is for ordinary values.
 
 • https://medium.freecodecamp.org/model-view-controller-mvc-explained-through-ordering-drinks-at-the-bar-efcba6255053 <= Model-View-Controller (MVC) Explained Through Ordering Drinks At The Bar
+
+### DAY 2 - Nov. 14 (Tue)
+
+• https://codingbootcamp.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=abbe42a5-32fd-4f24-bcd3-77ca9bc259be
+
+• JS: How to deal with Date... 
+	https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date 
+	cf. Moment.js
+
+• JS(ES6): arrow-functions-example.js <= ARROW FUNCTION EXAMPLES
+
+• http://docs.sequelizejs.com/ <= <= Sequelize 
+	https://www.youtube.com/watch?v=qsDvJrGMSUY 
+	https://gist.github.com/zcaceres/742744b708393c022703b615d1bffbb1
+
+### DAY 3 - Nov. 15 (Wed)
+
+• https://codingbootcamp.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=547ad9cc-9181-4e0b-9a04-635a99d6fd77
+
+• SequelizeQuickStartGuide.pdf
+
+• The Sequelize Command Line Interface (CLI) 
+	https://www.npmjs.com/package/sequelize-cli 
+		> npm install -g sequelize-cli 
+	https://github.com/sequelize/cli
+
+• Sequelize with sequelize-cli 
+	> sequelize init:config <= make ./config/config.json 
+	> sequelize init:models <= make ./models/index.js (Don't have to touch this file! Use the file as it is!) 
+
+	./models/index.js reads all user-defined model files in models folder and save each model as a property, where the property name is "the first argument" (not the variable!) of sequelize.define() 
+
+	cf. Table name made by sequelize.define() is the first argument + "s"
+
+• SequelizeCRUDActionsCheatSheet.pdf 
+	DB vs. Sequelize 
+		C - sequelize.define() 
+		R - model_name.findOne() or model_name.findAll() 
+		U - model_name.update() 
+		D - model_name.destroy()
+
+• method-override-for-body-parser.txt <= Why the "method-overide" NPM package is required for "body-parser"
+
+• https://hiddentao.com/archives/2011/11/12/adding-model-validation-to-the-sequelize-orm-library-for-node-js/ <= Adding model validation to the Sequelize ORM library for node.js
+
+### DAY 4 - Nov. 16 (Thu)
+
+• https://codingbootcamp.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=cd7d0bcb-606d-4517-a205-31e0e1ebfd5b
+
+• CSS: Combinators... 
+	A, B <= any element matching A and/or B 
+	A B	<= any element matching B that is a descendant of an element matching A (that is: a child, or a child of a child, etc.) = descendant selector 
+	A > B <= any element matching B that is a direct child of an element matching A = child selector 
+	A + B <= any element matching B that is the next sibling of an element matching A (that is: the next child of the same parent) = adjacent sibling selector 
+	A ~ B <= any element matching B that is one of the next siblings of an element matching A (that is: one of the next children of the same parent) = general sibling selector
+
+• Sequelize: For association between tables, (ex. modelA=Player, modelB=Team) 
+	In modelA.associate(), 
+		modelA.belongsTo(modelB, {...}); <= will add a modelBId attribute to modelA to hold the primary key value for modelB as a foreign key 
+	In modelB.associate(), 
+		modelB.hasMany(modelA, {...});
+
+• Sequelize: For join a table, use "include: [model_for_table]" as a condition
+
+• https://www.youtube.com/watch?v=EDgpYNqItmc&index=1&list=PLgJ8UgkiorCnbVc-ZiCqgm3dw7Cvrewq2 <= Sequelize + Handlebars Review
 

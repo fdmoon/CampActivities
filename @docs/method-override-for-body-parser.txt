@@ -1,0 +1,196 @@
+Body parser allows you to use req.body.name_attr_in_your_submit (in the case below it's wish) inside of your app.post code.  
+
+Explain that you need the body-parser npm package to be able to use req.body.event in server.js within the app.post('/', function(req, res) section.
+
+Note that:
+
+var methodOverride = require("method-override"); 
+
+Before and in conjunction with the below, which should be after it in the code:
+
+app.use(methodOverride("_method"));
+
+Is used in order to (send PUT and DELETE requests to the server):
+
+The <form action="/{{this.id}}?_method=DELETE" method="POST"> and <form action="/?_method=PUT" method="POST"> actions look as if they are hacked together because HTML5 no longer supports the DELETE and PUT methods.
+In spite of this, we can use this odd syntax in conjunction with the "method-overide" NPM package to send PUT and DELETE requests to the server.
+Also, despite the odd syntax, your PUT and DELETE routes need only contain everything up until the question mark. As such, your routes would be app.delete("/:id", function(req, res) and app.put("/", function(req, res).
+
+For app.get requests, we use req.params.name_of_what_follows_the_:_in_the_url, in the case below, :name.
+
+For app.delete requests, we use req.params.name_of_what_follows_the_:_in_the_url, in the case below, :id.
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// POST
+<div>
+  <form action="/" method="POST">
+  	<textarea type="text" name="wish"></textarea>
+
+  	<button type="submit">Submit</button>
+  </form>
+</div>
+
+// Post route -> back to home
+app.post("/", function(req, res) {
+
+  // Test it.
+  // console.log('You sent, ' + req.body.wish);
+
+  // Test it.
+  // res.send('You sent, ' + req.body.wish)
+
+  connection.query("INSERT INTO wishes (wish) VALUES (?)", [req.body.wish], function(err, result) {
+    if (err) {
+      throw err;
+    }
+
+    res.redirect("/");
+  });
+
+});
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// ANOTHER POST
+
+<h2>Create a Plan</h2>
+<form method="POST" action="/" class="button-size">
+	<textarea type="text" name="plan"></textarea>
+	<button type="submit">Save Plan!</button>
+</form>
+
+app.post("/", function(req, res) {
+  connection.query("INSERT INTO plans (plan) VALUES (?)", [req.body.plan], function(err, result) {
+    if (err) {
+      throw err;
+    }
+
+    res.redirect("/");
+  });
+});
+
+THE ACCOMPANYING GET FOR THE POST ABOVE:
+
+app.get("/", function(req, res) {
+  connection.query("SELECT * FROM plans;", function(err, data) {
+    if (err) {
+      throw err;
+    }
+
+    res.render("index", { plans: data });
+
+  });
+});
+
+THE VIEW ENGINE FOR THE res.render above:
+
+<ul>
+  {{#each plans}}
+    <li>
+      <p>
+        {{this.id}}. {{this.plan}}
+
+        <form action="/{{this.id}}?_method=DELETE" method="POST">
+          <input type="hidden" name="id" value="{{this.id}}">
+          <button type="submit">Delete Plan!</button>
+        </form>
+      </p>
+    </li>
+  {{/each}}
+</ul>
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// GET
+
+app.get("/icecream/:name", function(req, res) {
+  for (var i = 0; i < icecreams.length; i++) {
+    if (icecreams[i].name === req.params.name) {
+      return res.render("icecream", icecreams[i]);
+    }
+  }
+});
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// DELETE
+
+<ul>
+  {{#each plans}}
+    <li>
+      <p>
+        {{this.id}}. {{this.plan}}
+
+        <form action="/{{this.id}}?_method=DELETE" method="POST">
+          <input type="hidden" name="id" value="{{this.id}}">
+          <button type="submit">Delete Plan!</button>
+        </form>
+      </p>
+    </li>
+  {{/each}}
+</ul>
+
+app.delete("/:id", function(req, res) {
+  connection.query("DELETE FROM plans WHERE id = ?", [req.params.id], function(err, result) {
+    if (err) {
+      throw err;
+    }
+
+    res.redirect("/");
+  });
+});
+
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// PUT
+
+<h2>Update a Plan</h2>
+<form action="/?_method=PUT" method="POST" class="button-size">
+  <input type="text" name="id" placeholder="id">
+	<textarea type="text" name="plan" placeholder="plan"></textarea>
+	<button type="submit">Update Plan!</button>
+</form>
+
+app.put("/", function(req, res) {
+
+  connection.query("UPDATE plans SET plan = ? WHERE id = ?", [
+    req.body.plan, req.body.id
+  ], function(err, result) {
+    if (err) {
+      throw err;
+    }
+
+    res.redirect("/");
+  });
+});
+
+START(app)//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+Regarding putting app in parentheses, like so, in server.js:
+
+require("./app/routing/apiRoutes")(app);
+require("./app/routing/htmlRoutes")(app);
+
+The above is done so that the htmlRoutes file and the apiRoutes file can do this and this, respectively:
+
+module.exports = function(app) {
+	app.get()
+	app.use()
+};
+
+module.exports = function(app) {
+	app.post()
+	app.get()
+};
+
+IF we don't pass (app) down to the other files as a parameter (via the parentheses after the require), then we need to have this code at the top of htmlRoutes and apiRoutes:
+
+var express = require("express");
+var app = express();
+
+If we have that code and we don't have the: 
+
+require("./app/routing/apiRoutes")(app);
+require("./app/routing/htmlRoutes")(app);
+
+THEN everything will still work, it just requires those extra lines of code on every routes page, AND it has to be reconfigured to be a variable with an object inside (see mongodb-scraper-testing).
+
+END (app) ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
