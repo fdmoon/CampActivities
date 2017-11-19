@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Star Wars - Express</title>
+  <!-- Latest compiled and minified CSS & JS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://code.jquery.com/jquery.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+
+  <div class="container">
+    <div class="jumbotron">
+      <h1>TESTBED</h1>
+      <h3>...!</h3>
+    </div>
+    <div class="row">
+
+      <div class="col-lg-12">
+
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title"><strong>COMMAND</strong></h3>
+          </div>
+          <div class="panel-body">
+            <input id="df" type="text" id="character-search" class="form-control">
+            <br>
+            <div class="text-right">
+              <button id="down" type="submit" class="btn btn-primary btn-md" id="search-btn"><span class="glyphicon glyphicon-search"></span> Search Your Feelings. You know it to be true.</button>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <form id="f-data" action="/upload" enctype="multipart/form-data" method="post">
+              <input id="ut" type="text" name="title1">
+              <input type="text" name="title2">
+              <input id="uf" type="file" name="file">
+              <input id="up" type="submit" value="Upload">
+          </form>          
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <div id="piechart">
+        Hello World
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.4/socket.io.js"></script>
+    <script>
+        var origin = window.location.origin.split(":");
+        var remote = origin[0] + ":" + origin[1] + ":8000";
+
+        console.log(remote);
+        
+        var socket = io(remote);
+
+        socket.connect();
+        // console.log(">>> connect...");
+
+        socket.on('message', function(data){
+            url = 'http://chart.apis.google.com/chart?cht=p3&chs=250x100&chd=t:' + data + '&chl=Hello|World';  
+            document.getElementById('piechart').innerHTML = "<img src="+ url + "></img>";
+        });
+    </script>
+
+    <script type="text/javascript">
+        $("#up").on("click", function(event){
+            event.preventDefault();
+
+            var form = $("#f-data")[0];
+            console.log(form);
+
+            var formData = new FormData(form);
+            console.log(formData);
+
+            $.ajax({
+                type: "POST",
+                url: "/upload",
+                data: formData,
+                async: false,
+                cache: false,
+                contentType: false,
+                processData: false                
+            }).done(function(data) {
+                console.log(data);
+            });
+        });
+
+        $("#down").on("click", function() {
+            console.log(">>>>>>>>>>>>>>");
+            var name = $("#df").val().trim();
+            window.open('/download/' + name, '_blank');
+        });
+    </script>
+
+</body>
+</html>

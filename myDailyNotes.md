@@ -764,3 +764,14 @@
 
 • https://www.youtube.com/watch?v=EDgpYNqItmc&index=1&list=PLgJ8UgkiorCnbVc-ZiCqgm3dw7Cvrewq2 <= Sequelize + Handlebars Review
 
+### DAY 5 - Nov. 17 (Fri)
+
+• X
+
+• FrontEnd - [ Middleware (= NPM) - BackEnd ]
+
+• http://agileforce.co.uk/heroku-workshop/multiple-environments/deploy-a-branch-other-than-master.html <= Deploy a branch other than Master 
+	> git push heroku <branch_name>:master
+
+• https://www.10bestdesign.com/dirtymarkup/ <= DirtyMarkup Formatter - HTML, CSS, & JavaScript Beautifier
+
