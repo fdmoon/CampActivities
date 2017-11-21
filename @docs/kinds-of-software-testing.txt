@@ -1,0 +1,20 @@
+Unit Tests = Testing an individual function to ensure a small piece of code works. Usually done by the individual developer or contributor.
+
+Integration Testing = Testing to see if newly added code causes any existing code to break. Typically administered by QA or automated with CI/CD tools like Travis or Jenkins.
+
+Performance Testing = Testing or benchmarking the efficiency or speed of a new code versus existing code. Performance testing often happens during the refactoring stage.
+
+Load Testing = Determining the failure points and behavior of a system or code under higher than expected load conditions. Determining the maximum service capacity of a piece of code or hardware.
+
+Compatibility Testing = Testing your software under numerous virtual environments. (different browsers, different hardware, different software versions, etc)
+
+Compliance testing = Testing whether or not the product/software meets customer specifications. (Is the documentation comprehensive? Is our test coverage at 100%? Think of it as an audit.)
+
+End-To-End Test = Run every possible test from start to finish. Check for deployment readiness. Typically only run in very important cases like a new major version release. Costly and time consuming to run.
+
+Hallway testing = A usability test. Handing off your app to someone with no knowledge of how your software works and no instructions from you on how to use it. Named so because literally anyone could be walking down the hallway when you hand them a tablet and say "Here you go! Give this app a try." Useful for evaulating real-world use cases and guaging your app's user friendliness.
+
+Test Suite = A reference that can either indicate all the collective tests for your application or a series of similar tests coupled together to test a particular feature.
+
+Edge Case = A problem or situation that occurs only at an extreme (maximum or minimum) operating parameter. Do you have a fallback for when someone is using your software in a way it was not designed to be used? Expecting the unexpected is difficult. And as a result, edge case bugs are often the most catastrophic of bugs. Identifying edge cases is an art in itself.
+

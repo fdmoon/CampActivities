@@ -776,9 +776,9 @@
 • https://www.10bestdesign.com/dirtymarkup/ <= DirtyMarkup Formatter - HTML, CSS, & JavaScript Beautifier
 
 
-[WEEK 9]
+## [WEEK 9]
 
-DAY 1 - Nov. 20 (Mon)
+### DAY 1 - Nov. 20 (Mon)
 • X
 
 • ~/CampOthers/local-auth-nodejs 
@@ -793,4 +793,21 @@ DAY 1 - Nov. 20 (Mon)
 • https://dev.to/ <= The DEV Community
 
 • https://medium.freecodecamp.org/building-a-chat-application-with-mean-stack-637254d1136d <= if you want to learn socket.io
+
+### DAY 2 - Nov. 21 (Tue)
+
+• https://codingbootcamp.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=ea7f12dc-fdbf-4be9-828e-65469f4cb27a
+
+• kinds-of-software-testing.txt
+
+• https://mochajs.org/ <= Mocha is a feature-rich JavaScript test framework running on Node.js and in the browser, making asynchronous testing simple and fun. Mocha tests run serially, allowing for flexible and accurate reporting, while mapping uncaught exceptions to the correct test cases.
+
+• https://www.npmjs.com/package/mocha
+
+• http://chaijs.com/api/
+
+• https://www.npmjs.com/package/nightmare
+
+• For tracking file changes (at Git Bash), 
+	> tail -f <file_name>
 

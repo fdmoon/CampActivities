@@ -7,7 +7,7 @@ var bodyParser = require("body-parser");
 // Sets up the Express App
 // =============================================================
 var app = express();
-var PORT = 3000;
+var PORT = 3001;
 
 // Sets up the Express app to handle data parsing
 app.use(bodyParser.json());
