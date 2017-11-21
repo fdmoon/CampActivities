@@ -14,7 +14,11 @@
   <div class="container">
     <div class="jumbotron">
       <h1>TESTBED</h1>
-      <h3>...!</h3>
+      
+    <div id="piechart">
+        Here is a placeholder to shows you pushed data from server...
+    </div>
+
     </div>
     <div class="row">
 
@@ -28,15 +32,14 @@
             <input id="df" type="text" id="character-search" class="form-control">
             <br>
             <div class="text-right">
-              <button id="down" type="submit" class="btn btn-primary btn-md" id="search-btn"><span class="glyphicon glyphicon-search"></span> Search Your Feelings. You know it to be true.</button>
+              <button id="down" type="submit" class="btn btn-primary btn-md" id="search-btn">Download</button>
             </div>
           </div>
         </div>
 
         <div>
           <form id="f-data" action="/upload" enctype="multipart/form-data" method="post">
-              <input id="ut" type="text" name="title1">
-              <input type="text" name="title2">
+              <input id="ut" type="text" name="title">
               <input id="uf" type="file" name="file">
               <input id="up" type="submit" value="Upload">
           </form>          
@@ -45,18 +48,15 @@
     </div>
   </div>
 
-    <div id="piechart">
-        Hello World
-    </div>
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.4/socket.io.js"></script>
     <script>
         var origin = window.location.origin.split(":");
         var remote = origin[0] + ":" + origin[1] + ":8000";
 
         console.log(remote);
-        
-        var socket = io(remote);
+
+        // var socket = io(remote);
+        var socket = io();
 
         socket.connect();
         // console.log(">>> connect...");

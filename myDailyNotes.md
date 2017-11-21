@@ -775,3 +775,22 @@
 
 • https://www.10bestdesign.com/dirtymarkup/ <= DirtyMarkup Formatter - HTML, CSS, & JavaScript Beautifier
 
+
+[WEEK 9]
+
+DAY 1 - Nov. 20 (Mon)
+• X
+
+• ~/CampOthers/local-auth-nodejs 
+	cf. EJS -- Embedded JavaScript templates
+
+• http://www.passportjs.org/ <= Passport -- Simple, unobtrusive authentication for Node.js
+
+• https://scotch.io/tutorials/easy-node-authentication-setup-and-local <= Easy Node Authentication: Setup and Local
+
+• https://scotch.io/tutorials/an-introduction-to-mongodb <= An Introduction to MongoDB
+
+• https://dev.to/ <= The DEV Community
+
+• https://medium.freecodecamp.org/building-a-chat-application-with-mean-stack-637254d1136d <= if you want to learn socket.io
+

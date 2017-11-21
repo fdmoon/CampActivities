@@ -99,18 +99,16 @@ app.post("/api/new", function(req, res) {
   // res.json(newcharacter);
 });
 
-// Starts the server to begin listening
-// =============================================================
-app.listen(PORT, function() {
-  console.log("App listening on PORT " + PORT);
-});
-
 
 /*****************************************************************************/
 /*****************************************************************************/
 /*****************************************************************************/
-var server = require('http').createServer();
-var io = require('socket.io')(server);
+// var app = require('express')();
+var http = require('http').Server(app);
+var io = require('socket.io')(http);
+
+// var server = require('http').createServer();
+// var io = require('socket.io')(server);
 
 io.on('connection', function(client){
     console.log(">>> connection...");
@@ -126,9 +124,9 @@ io.on('connection', function(client){
     });
 });
 
-server.listen(8000, function() {
-  console.log("Push listening on PORT " + 8000);
-});
+// server.listen(8000, function() {
+//   console.log("Push listening on PORT " + 8000);
+// });
 
 myrand = (client) => setInterval( () => {
     r1 = Math.floor(Math.random()*101);
@@ -138,3 +136,11 @@ myrand = (client) => setInterval( () => {
 /*****************************************************************************/
 /*****************************************************************************/
 /*****************************************************************************/
+
+// Starts the server to begin listening
+// =============================================================
+// app.listen(PORT, function() {
+http.listen(PORT, function() {
+  console.log("App listening on PORT " + PORT);
+});
+
