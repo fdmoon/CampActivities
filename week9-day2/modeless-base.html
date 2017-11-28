@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script type="text/javascript">
+        function OpenModeless () {
+            if (window.showModelessDialog) {        // Internet Explorer
+                showModelessDialog ("modeless-win.html", window, "dialogWidth:300px; dialogHeight:200px");
+            } 
+            else {
+                window.open ("modeless-win.html", "","width=300, height=200, alwaysRaised=yes");
+            }
+        }
+    </script>
+</head>
+<body>
+    First open a modeless dialog with this button:
+    <button id="modeless_button" onclick="OpenModeless ();">Open a modeless dialog!</button>
+    <br /><br />
+    You can change the text color of the button with the selection list of the modeless window.
+</body>
+</html>

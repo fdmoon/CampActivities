@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Modeless window example</title>
+    <script type="text/javascript">
+        function ChangeButtonColorInOpener (selectTag) {
+            var openerWindow = null;
+            if (window.dialogArguments) { // Internet Explorer
+                openerWindow = window.dialogArguments;
+            } else {        // Firefox, Safari, Google Chrome and Opera
+                if (window.opener) {
+                    openerWindow = window.opener;
+                }
+            }
+            if (openerWindow) {
+                var button = openerWindow.document.getElementById ("modeless_button");
+                button.style.color = selectTag.options[selectTag.selectedIndex].text;
+            }
+        }
+    </script>
+<body>
+    Change the color of the button in the opener window:
+    <select onchange="ChangeButtonColorInOpener (this)">
+        <option />black
+        <option />red
+        <option />blue
+        <option />green
+    </select>
+</body>
+</html>

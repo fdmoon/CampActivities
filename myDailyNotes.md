@@ -811,3 +811,13 @@
 • For tracking file changes (at Git Bash), 
 	> tail -f <file_name>
 
+
+## [WEEK 10]
+
+### DAY 1 - Nov. 27 (Mon)
+
+• X
+
+• JS: In http://origin?param1=value1&param2=value2&..., 
+	window.location.search is "?param1=value1&param2=value2&..."
+
