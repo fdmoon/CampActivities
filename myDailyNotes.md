@@ -821,3 +821,21 @@
 • JS: In http://origin?param1=value1&param2=value2&..., 
 	window.location.search is "?param1=value1&param2=value2&..."
 
+### DAY 2 - Nov. 28 (Tue)
+
+• https://codingbootcamp.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=ad168bc9-8f11-4967-b2f8-b0f09646824e
+
+• MongoDB: have to run the server before using MongoDB (> mongod), and then run it at a different window (> mongo)
+
+• MongoDB: Database - Collection (Table) - Document (Record) 
+	> use database_name <= get to be assigned to "db" 
+	> db.collection_name.method_name()
+
+• MongoDBmLabHerokuDeploymentProcess.pdf
+
+• https://github.com/the-Coding-Boot-Camp-at-UT/09-25-2017-Austin-Class-Repository-FSF-FT/blob/master/class-content/18-mongo-mongoose/Supplemental/Installing-MongoDB.md <= Installing MongoDB on your Machine
+
+• https://github.com/cheeriojs/cheerio <= Fast, flexible, and lean implementation of core jQuery designed specifically for the server (Web Scraping)
+
+• https://github.com/dgarrick/headliner (http://headlinr.herokuapp.com/) <= headliner is a service that clusters news articles around common stories
+
