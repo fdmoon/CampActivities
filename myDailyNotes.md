@@ -839,3 +839,9 @@
 
 • https://github.com/dgarrick/headliner (http://headlinr.herokuapp.com/) <= headliner is a service that clusters news articles around common stories
 
+### DAY 3 - Nov. 29 (Wed)
+
+• https://codingbootcamp.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=5c81d7f5-f689-4e20-bff6-4357848482f3
+
+• https://www.npmjs.com/package/mongojs <= Easy to use module that implements the mongo api
+
