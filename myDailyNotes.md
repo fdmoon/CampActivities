@@ -683,7 +683,7 @@
 	PRIMARY KEY (key_col_name) 
 	FOREIGN KEY (my_col_name) REFERENCES you_table_name(you_col_name)
 
-• ORM: Object Relational Mapping (ORM) is the process of mapping between objects and relational database systems...
+• ORM: Object Relational Mapper (ORM) is the process of mapping between objects and relational database systems...
 
 • JS's asynchronous nature -> can't guarantee execution order of app -> consider using your own callback function as a parameter
 
@@ -844,4 +844,17 @@
 • https://codingbootcamp.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=5c81d7f5-f689-4e20-bff6-4357848482f3
 
 • https://www.npmjs.com/package/mongojs <= Easy to use module that implements the mongo api
+
+### DAY 4 - Nov. 30 (Thu)
+
+• https://codingbootcamp.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=5102e16e-121a-4076-bec7-b9a111c17999
+
+• MongoDB: What's the difference between save() and insert() in MongoDB? 
+	Save is a wrapper for update and insert. Functionally, save and insert are very similar, especially if no _id value is passed. However, if an _id key is passed, save() will update the document, while insert() will throw a duplicate key error.
+
+• ODM: Object Document Mapper (ODM) is the process of mapping between objects and noSQL database systems like MongoDB (cf. Object Relational Mapper (ORM))
+
+• https://www.npmjs.com/package/mongoose <= Mongoose is a MongoDB object modeling tool designed to work in an asynchronous environment
+
+• https://p5js.org/ <= a JS client-side library for creating graphic and interactive experiences (animations), based on the core principles of Processing
 
