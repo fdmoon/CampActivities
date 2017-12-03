@@ -858,3 +858,11 @@
 
 • https://p5js.org/ <= a JS client-side library for creating graphic and interactive experiences (animations), based on the core principles of Processing
 
+### DAY 5 - Dev. 1 (Fri)
+
+• X
+
+• https://github.com/Multishifties/async_code_review <= Lesson plan for an Async JavaScript Master Class (including Promises)
+
+• https://www.youtube.com/watch?v=8aGhZQkoFbQ <= YouTube JSConf -- Philip Roberts: What the heck is the event loop anyway? | JSConf EU 2014
+
