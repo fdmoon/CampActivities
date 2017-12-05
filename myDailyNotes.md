@@ -866,3 +866,64 @@
 
 • https://www.youtube.com/watch?v=8aGhZQkoFbQ <= YouTube JSConf -- Philip Roberts: What the heck is the event loop anyway? | JSConf EU 2014
 
+
+## [WEEK 11]
+
+### DAY 1 - Dec. 4 (Mon)
+
+• https://codingbootcamp.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=f8599ea5-a45e-4828-9114-ce808ee5b61a
+
+• JS(ES6): let and const... 
+	http://wesbos.com/let-vs-const/ <= Wes Bos's ES6 let VS const variables 
+	http://wesbos.com/javascript-scoping/ <= Wes Bos's How let and const are scoped in JavaScript
+
+• https://scotch.io/tutorials/javascript-promises-for-dummies <= JavaScript Promises for Dummies
+
+• JS(ES6): For Array (cf. String is also a kind of Array!), 
+	array.slice(start_index, end_position[optional]); <= can be selected negative values (right-based) and return a new array 
+	array.splice(index, howmany_items_to_be_removed, item1_to_be_added, ....., itemX_to_be_added); <= return a new array 
+
+	array.startsWith(searchElement, start_index[optional. default 0]) <= return a Boolean 
+	array.includes(searchElement, start_index[optional. default 0]) <= return a Boolean 
+
+	array.forEach(function(currentValue, index[optional], arr[optional]), thisValue[optional]); 
+	array.map(function(currentValue, index[optional], arr[optional]), thisValue[optional]); <= create a new array with the returned elements of calling a function for every array element 
+	array.filter(function(currentValue, index[optional], arr[optional]), thisValue[optional]); <= create an array filled with all array elements that pass a test (returning "true" in a function) 
+	array.reduce(function(total, currentValue, index[optional], arr[optional]), initialValue); <= reduce the array to a single value saved in total (summation, concatenated string and so on, ex. return total + currentValue;) 
+	array.find(function(currentValue, index[optional], arr[optional]), thisValue[optional]); <= return the value of the "first" element in an array that pass a test (returning "true" in a function)
+
+• JS(ES6): In arrow function (=>), 
+	without curly brackets, the "return" statement is implied. 
+	can omit the parenthesis if there's only a single parameter.
+
+• JS(ES6): Destructuring... 
+	var { key_names of object that you want to use (separated by ",") } = object; 
+	var [ variable1, variable2, ...others] = array; <= others is an array with other elements
+
+• JS(ES6): Modules... 
+	In Node.js, 
+		module.exports = ; 
+		require(); 
+	In ES6, 
+		export <variable or function> 
+		import <variable_name or function_name> from <module(file)_name>
+
+• JS(ES6): Classes... 
+	class CLASS_NAME [extends BASE_CLASS] { 
+		"constructor"(...) { 
+			this."property" = value; 
+		} 
+		"method"() {};	// cf. OBJECT_NAME.prototype.method = function() {}; 
+	}
+
+• Day-1-ES6.zip <= ES6 as Promised
+
+• https://github.com/DrkSephy/es6-cheatsheet <= ES2015 [ES6] cheatsheet containing tips, tricks, best practices and code snippets
+
+• http://es6katas.org/
+
+• http://babeljs.io/ (http://babeljs.io/repl/) <= Babel -- The compiler for writing next generation JavaScript 
+	> npm install -g babel-cli babel-preset-env babel-preset-stage-2 && echo "alias bnode='babel-node --presets es2015,stage-2'" >> ~/.bash_profile 
+	cf. Node.js always supports ES6, but browser-side does "NOT". 
+		ES6 Compatibility Table: <http://kangax.github.io/compat-table/es6/>
+
