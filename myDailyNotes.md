@@ -927,3 +927,102 @@
 	cf. Node.js always supports ES6, but browser-side does "NOT". 
 		ES6 Compatibility Table: <http://kangax.github.io/compat-table/es6/>
 
+### DAY 2 - Dec. 5 (Tue)
+
+• https://codingbootcamp.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=9398f085-b739-4677-b859-3866dee2335c
+
+• React.js: Get started... 
+	> npm install -g create-react-app yarn 
+	cf. https://reactjs.org/ <= ReactJS Documentation 
+	cf. To use React.js, we'll need a build system; webpack & babel. 
+	cf. In React-land, we don’t get off in tiger invested territory.
+
+• React.js: How to create a new app... 
+	> create-react-app <app_name> 
+	> cd <app_name> 
+	> yarn start <= yarn is similar to nodemon, which is a watcher for monitoring a change in code 
+	cf. /<app_name>/src/index.js <= starting point! (usually with App.js)
+
+• React.js: How to use a component... 
+	import component_name from "./path/component_name"; 
+		<= in component_name.js 
+			import React from "react"; 
+			const component_name = () => { 
+				JavaScript code here... 
+				return ( 
+					html code like <p>Hello World!</p> 
+					JavaScript code in {} curly bracket like {name} or {name.split("").reverse()} 
+					JSX code like <component_name /> <= JSX is a preprocessor step that adds XML syntax to JavaScript. 
+				); 
+			export default component_name; 
+	const container = () => <component_name />; <= XML format! 
+		cf. const container = () => [<component_name1 />, <component_name2 />, ...]; 
+		cf. 
+			const container = () => ( 
+				<div> 
+					<component_name1 /> 
+					<component_name2 /> 
+					... 
+				</div> 
+			);
+
+• React.js: How to use CSS (with camel-cased name)... 
+	https://facebook.github.io/react/docs/dom-elements.html#style <= React documentation for the style attribute 
+	https://www.reactenlightenment.com/react-jsx/5.6.html <= Inline CSS Section of the React Enlightenment Book 
+	cf. import "./path/<file_name>.css";
+
+• React.js: How to pass arguments into the component (Props)... 
+	component-side... 
+		import React from "react"; 
+		const Component = props => { 
+			console.log(props); <= props.attr_name1, props.attr_name2, ..., props.children 
+			return (...); 
+		}; 
+		export default Component; 
+	container-side... 
+		import React from "react"; 
+		import Component from "./path/Component"; 
+		const Container = () => <Component attr_name1="value1" attr_name2="value2" ...>children</Component>; 
+	cf. https://facebook.github.io/react/docs/components-and-props.html <= React's documentation on components & props
+
+• React.js: How to export a component with a folder name... 
+	create "index.js" with 
+		export { default } from "./<component_file_name>";
+
+• React.js: How to loop and render elements... 
+	with the for-loop pushing a component to a temporary array 
+		const App = () => { 
+			let array_temp = []; 
+			for(let i=0; i<array_org.length; i++) { 
+				array_temp.push(<Component attr_name1={array_org[i].key1} attr_name2={array_org[i].key2} ... />); 
+			} 
+			return ( {array_temp} ); 
+		}; 
+	with "map": 
+		const App = () => { 
+			return ( 
+				{ 
+					array_org.map((elem) => { 
+						return ( <Component attr_name1={array_org[i].key1} attr_name2={array_org[i].key2} ... /> ); 
+					}) <= Don't use semicolon (;) here! 
+				} 
+			); 
+		};
+
+• JSX: Most React developers use a special syntax called JSX which makes it easier to write these structures. The <div /> syntax is transformed at build time to React.createElement('div'). 
+	cf. React.createElement('tag_name', { attr_name: 'value'}, children);
+
+• JSX: NOTICE... 
+	In order to return separate JSX elements from a function, all of the higher level elements need "a single parent", e.g., usually a `div`. 
+	All JSX tags must either have an adjacent tag or else have a self-closing forward slash. 
+	`className` must be used to describe an element's `class` property since `class` is a reserved word in JavaScript. 
+	Remember to import the `react` library in any file where JSX is utilized.
+
+• https://react.rocks/
+
+• https://femmebot.github.io/google-type/ <= HAND-PICKED TALES from AESOP’S FABLES with HAND-PICKED TYPE from GOOGLE FONTS
+
+• https://www.awwwards.com/20-best-web-fonts-from-google-web-fonts-and-font-face.html <= 20 Best Web Fonts from Google Web Fonts and @font-face
+
+• https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet <= a quick reference and showcase for .md
+
