@@ -931,19 +931,19 @@
 
 • https://codingbootcamp.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=9398f085-b739-4677-b859-3866dee2335c
 
-• React.js: Get started... 
+• ReactJS: Get started... 
 	> npm install -g create-react-app yarn 
 	cf. https://reactjs.org/ <= ReactJS Documentation 
-	cf. To use React.js, we'll need a build system; webpack & babel. 
+	cf. To use ReactJS, we'll need a build system; webpack & babel. 
 	cf. In React-land, we don’t get off in tiger invested territory.
 
-• React.js: How to create a new app... 
+• ReactJS: How to create a new app... 
 	> create-react-app <app_name> 
 	> cd <app_name> 
 	> yarn start <= yarn is similar to nodemon, which is a watcher for monitoring a change in code 
 	cf. /<app_name>/src/index.js <= starting point! (usually with App.js)
 
-• React.js: How to use a component... 
+• ReactJS: How to use a component... 
 	import component_name from "./path/component_name"; 
 		<= in component_name.js 
 			import React from "react"; 
@@ -966,12 +966,12 @@
 				</div> 
 			);
 
-• React.js: How to use CSS (with camel-cased name)... 
+• ReactJS: How to use CSS (with camel-cased name)... 
 	https://facebook.github.io/react/docs/dom-elements.html#style <= React documentation for the style attribute 
 	https://www.reactenlightenment.com/react-jsx/5.6.html <= Inline CSS Section of the React Enlightenment Book 
 	cf. import "./path/<file_name>.css";
 
-• React.js: How to pass arguments into the component (Props)... 
+• ReactJS: How to pass arguments into the component (Props)... 
 	component-side... 
 		import React from "react"; 
 		const Component = props => { 
@@ -985,11 +985,11 @@
 		const Container = () => <Component attr_name1="value1" attr_name2="value2" ...>children</Component>; 
 	cf. https://facebook.github.io/react/docs/components-and-props.html <= React's documentation on components & props
 
-• React.js: How to export a component with a folder name... 
+• ReactJS: How to export a component with a folder name... 
 	create "index.js" with 
 		export { default } from "./<component_file_name>";
 
-• React.js: How to loop and render elements... 
+• ReactJS: How to loop and render elements... 
 	with the for-loop pushing a component to a temporary array 
 		const App = () => { 
 			let array_temp = []; 
@@ -1002,8 +1002,8 @@
 		const App = () => { 
 			return ( 
 				{ 
-					array_org.map((elem) => { 
-						return ( <Component attr_name1={array_org[i].key1} attr_name2={array_org[i].key2} ... /> ); 
+					array_org.map( item => { 
+						return ( <Component attr_name1={item.key1} attr_name2={item.key2} ... /> ); 
 					}) <= Don't use semicolon (;) here! 
 				} 
 			); 
@@ -1025,4 +1025,99 @@
 • https://www.awwwards.com/20-best-web-fonts-from-google-web-fonts-and-font-face.html <= 20 Best Web Fonts from Google Web Fonts and @font-face
 
 • https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet <= a quick reference and showcase for .md
+
+### DAY 3 - Dec. 6 (Wed)
+
+• https://codingbootcamp.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=d8b048a2-0b6b-44be-bdd9-584ec9fcf204
+
+• JS: To distinguish key_name of a property from variable_name, use square bracket ([])! 
+	ex. var object = { [key_name] = value; }
+
+• JS: The bind() method creates a new function that, when called, has its "this" keyword set to the provided value, with a given sequence of arguments preceding any provided when the new function is called. 
+	bound_function = original_function.bind(thisArg[, arg1[, arg2[, ...]]]); 
+	<= thisArg is the value to be passed as the this parameter to the target function when the bound function is called.
+
+• ReactJS: How to create a stateful component (State)... 
+	import React, { Component } from "react"; 
+	class Name extends Component { 
+		constructor(props) { 
+			super(props); 
+			this.state = {...}; <= initialize 
+		} 
+		func_name = () => { 
+			this.setState(...); <= see below! 
+		} 
+		render() { 
+			return (JSX_code); 
+		} 
+	}; 
+	cf. setState() enqueues changes to the component state and tells React that this component and its children need to be re-rendered with the updated state. React does not guarantee that the state changes are applied immediately. 
+		setState(updater[, callback]); <= "updater" is an function with the signature: 
+			this.setState((prevState, props) => { 
+				return {updating_code_of_this.state_object}; 
+			}); 
+		setState(stateChange[, callback]); <= "stateChange" is an object. 
+	cf. Subsequent calls of the stateChange object form will override values from previous calls in the same cycle, so the quantity will only be incremented once. If the next state depends on the previous state, use "the updater function form", instead!
+
+• ReactJS: Properties in a component class are not shared with other connections. In other word, they're independent per a connection. So, all values will be cleared when to reload the page.
+
+• https://reactjs.org/docs/events.html <= SyntheticEvent
+
+• https://facebook.github.io/react/docs/handling-events.html <= React's Documentation on Handling Events
+
+• https://facebook.github.io/react/docs/forms.html <= React documentation on Forms
+
+### DAY 4 - Dec. 7 (Thu)
+
+• https://codingbootcamp.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=379ccc20-b6f1-46aa-bffe-c31b8185e920
+
+• ReactJS: ReactJS Best Practices and Tips ("Tree" structure)... 
+	Most pages are made by stateless components. But if you need to stateful component, use a container component with a state variable and stateless presentation components. 
+		<= Stateless components (Presentational components) => return function! 
+		<= Stateful components (Container components) => return class! 
+	cf. https://medium.com/@dan_abramov/smart-and-dumb-components-7ca2f9a7c7d0 <= Presentational and Container Components
+
+• ReactJS: React.Component... 
+	https://reactjs.org/docs/react-component.html <= React's Documentation on React.Component 
+	https://engineering.musefind.com/react-lifecycle-methods-how-and-when-to-use-them-2111a1b692b1 <= React Lifecycle Methods- how and when to use them 
+	cf. componentDidMount() inherited from React.Component, is invoked immediately after a component is mounted. Initialization that requires DOM nodes should go here. If you need to load data from a remote endpoint, this is a good place to instantiate the network request.
+
+• ReactJS: "react-router"... 
+	ReactJS make "ONE PAGE" application. But it can have "MULTI-VIEWS" using react-router 
+	cf. https://reacttraining.com/react-router/ <= React Router -- Declarative Routing for React 
+	cf. https://reacttraining.com/react-router/web/guides/philosophy <= React Router 
+
+	> npm install react-router-dom --save 
+
+	import { BrowserRouter as Router, Route } from "react-router-dom"; 
+	<Router> <= area where "Route" can be applied 
+		<div> 
+			... 
+			<Route exact path="/" component={Component} /> <= call component in case of matching the path 
+			<Route exact path="/path1" component={Component1} /> 
+			<Route path="/path2" component={Component2} /> <= pass if path starts with "/path2" 
+		</div> 
+	</Router>; 
+
+	import { Link } from "react-router-dom"; 
+	<Link to="/path"><.Link> <= similar to <a> tag
+
+• ReactJS: https://facebook.github.io/react/docs/conditional-rendering.html <= React's Documentation on Conditional Rendering 
+	cf. { condition ? action_if_true : action_if_false }
+
+• https://github.com/mzabriskie/axios <= Promise based HTTP client for the browser and node.js (.get/post/put/delete/...)
+
+• https://tutorialzine.com/2017/07/javascript-async-await-explained <= JavaScript Async/Await
+
+• https://chrome.google.com/webstore/search/react?hl=en-US <= React Developer Tools Extension for Google Chrome
+
+• https://frontendmasters.com/books/front-end-handbook/2017/ <= Front-End Developer Handbook 2017
+
+• https://medium.com/swlh/browsers-not-apps-are-the-future-of-mobile-c552752ff75 <= Browsers, not apps, are the future of mobile
+
+### DAY 5 - Dec. 8 (Fri)
+
+• X
+
+• https://github.com/ideascomealive/mern2 <= Here is a generic MERN stack CRUD app.
 
