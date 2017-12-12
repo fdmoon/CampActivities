@@ -61,7 +61,7 @@ class Search extends Component {
         {
           this.state.results.length > 0 ?
             this.state.results.map( item => {
-              return <img src={item} width="100px" />;
+              return <img src={item} />;
             }) : <p>Not Found</p>
         }
       </div>

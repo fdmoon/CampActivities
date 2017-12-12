@@ -1121,3 +1121,50 @@
 
 • https://github.com/ideascomealive/mern2 <= Here is a generic MERN stack CRUD app.
 
+
+## [WEEK 12]
+
+### DAY 1 - Dec. 11 (Mon)
+
+• https://codingbootcamp.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=4184b29b-f112-4c0e-a12f-261d2ed84bc8
+
+• JSX: Tips for adding attributes... 
+	{...props} <= how to add all props as attributes in a child component 
+	style={{ attr: "value" }} <= how to add style directly
+
+• Express.js: var app = express(); app.use()... 
+	app.use(function(req, res, next) {}); <= This shows a middleware function with no mount path. The function is executed every time the app receives a request. 
+	app.use('/user/:id', function(req, res, next) {}); <= This shows a middleware function mounted on the /user/:id path. The function is executed for any type of HTTP request on the /user/:id path.
+
+• Express.js: express.Router()... 
+	Use the express.Router class to create modular, mountable route handlers. A Router instance is a complete middleware and routing system; for this reason, it is often referred to as a “mini-app”. 
+	A router needs to be mounted to an app: 
+		const router = express.Router(); 
+		router.get("/", (res, req) => res.end()); 
+		router.post("/", (res, req) => res.end()); 
+		app.use("/empty", router); 
+	This allows you to more easily encapsulate the functionality of several routes into an app which will be namespaced under a particular route. 
+	When express.Router() is called, a slightly different "mini app" is returned. The idea behind the "mini app" is that different routes in your app can become quite complicated, and you'd benefit from moving that logic into a separate file. 
+	cf. app.get can be used to create routes for the application at the top level. When express() is called in app.js, an app object is returned. Think of an app object as an Express application.
+
+• MERN Stack: Basic step... 
+	1. create-react-app 
+	2. server.js 
+	3. npm install 
+	4. yarn start 
+	cf. yarn build <= Builds the app for production to the build folder. It correctly bundles React in production mode and optimizes the build for the best performance. 
+	cf. create-react-app/README.md
+
+• MERN Stack: At client folder, 
+	Add "proxy": "http://localhost:3001" in package.json for connecting with Express 
+	cf. React usually use port 3000!
+
+• https://teamtreehouse.com/community/why-use-npm-start-but-not-npm-run-start 
+	<= In summary, running npm start could do one of two things: 
+		Run an arbitrary command (i.e. if such command is specified in the start property of package.json's scripts object) 
+		Else if no start property exists: Run node server.js, (which still may not be appropriate, for example the OP runs node app.js)
+
+• https://reacttraining.com/react-router/web/example/url-params <= URL params with React Router
+
+• https://reacttraining.com/react-router/web/example/no-match <= to use the `Switch` component from the React Router Dom library
+
