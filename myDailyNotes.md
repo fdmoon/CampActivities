@@ -1168,3 +1168,40 @@
 
 • https://reacttraining.com/react-router/web/example/no-match <= to use the `Switch` component from the React Router Dom library
 
+### DAY 2 - Dec. 12 (Tue)
+
+• https://codingbootcamp.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=acb5ccd0-8617-480a-889d-b556eb5e5cbb
+
+• https://codingbootcamp.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=5e78fbb1-bb80-48f1-b0cb-667607e6236b
+
+• PHP: Get started... 
+	https://www.apachefriends.org/ <= XAMPP Apache + MariaDB + PHP + Perl 
+	cf. Please have composer and PHP installed on the computer. 
+		Windows (Recommended is XAMPP, Download composer installer) 
+		MacOS ($ brew install homebrew/php/php71 && brew install composer)
+
+• PHP: http://php.net/manual/en/index.php <= PHP Manual
+
+• PHP: How to run a web server to see PHP files in browser... 
+	> php -S localhost:<PORT>
+
+• PHP: superglobals... 
+	$_GET['variable'] means someValue in case that URL is http://path/index.php?variable=someValue. 
+	cf. <?php print_r($_GET) ?> <= how to get all information 
+	cf. http://php.net/manual/en/language.variables.superglobals.php <= PHP's documentation on superglobals 
+	cf. You might want to read about query strings for this part: https://en.wikipedia.org/wiki/Query_string
+
+• Laravel: a PHP Framework... 
+	https://getcomposer.org/ <= Dependency Manager for PHP 
+
+	ex. How to create authentication page... 
+		make a new Laravel project using composer 
+			> composer create-project laravel/laravel <project_name> 
+		At <project_name> folder, 
+			> php artisan make:auth <= see "<project_name>/resources" folder 
+		go to "<project_name>/public" and run "php -S localhost:<PORT>" 
+
+	cf. https://laracasts.com/
+
+• https://adminlte.io/ <= AdminLTE Control Panel Template -- Best open source admin dashboard & control panel theme. Built on top of Bootstrap 3, AdminLTE provides a range of responsive, reusable, and commonly used components.
+

@@ -4,6 +4,7 @@
 node_modules
 
 # misc
+.vscode
 .DS_Store
 .env
 .env.local
@@ -14,4 +15,14 @@ node_modules
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# laravel
+hot
+storage
+*.key
+vendor
+.idea
+.vagrant
+Homestead.json
+Homestead.yaml
 
