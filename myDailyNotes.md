@@ -1205,3 +1205,117 @@
 
 • https://adminlte.io/ <= AdminLTE Control Panel Template -- Best open source admin dashboard & control panel theme. Built on top of Bootstrap 3, AdminLTE provides a range of responsive, reusable, and commonly used components.
 
+### DAY 3 - Dec. 13 (Wed)
+
+• https://codingbootcamp.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=d5ea11d3-7987-46a5-9983-8c26837bd585
+
+• Laravel: PRACTICAL EXAMPLE... 
+	# https://laravel.com/docs/5.5/views on Creating Views 
+	# https://laravel.com/docs/5.5/routing on Routing 
+		> php artisan route:list <= in <project_name> folder 
+
+	# Controller 
+		> php artisan make:controller <Controller_name> 
+			<= see <project_name>/app/Http/Controllers/ 
+		cf. Route::get('/path', '<Controller_name>@method'); 
+			<= see <project_name>/routes/web.php 
+
+	# Database <= set .env to connect to database 
+		CASE-I. "users" table... 
+			make seed 
+				> php artisan make:seed UsersTableSeeder 
+					<= see <project_name>/database/seeds/ 
+			@@@ in UsersTableSeeder.php 
+				<?php 
+				use Illuminate\Database\Seeder; 
+				class UsersTableSeeder extends Seeder 
+				{ 
+				    public function run() 
+				    { 
+				        factory(App\User::class, 50)->create(); <= add this!!! 
+				    } 
+				} 
+			go to "<project_name>/database/seeds/DatabaseSeeder.php" and remove comment for UsersTableSeeder 
+			run the command to add records into table 
+				> php artisan db:seed 
+		CASE-II. "posts" table... 
+			make model 
+				> php artisan make:model -m Post 
+			in <project_name>/database/migrations/*_posts_table.php 
+				$table->string('title'); or $table->integer('user_id'); or ... 
+			in <project_name>/database/factories/PostFactory.php 
+				<?php 
+				use Faker\Generator as Faker; 
+				$factory->define(App\Post::class, function (Faker $faker) { 
+				    return [ 
+				        'title' => $faker->word, 
+				        'user_id' => rand(1,50) 
+				    ]; 
+				}); 
+			in PostsTableSeeder.php... see above @@@ 
+		cf. Laravel artisan's "tinker" is a repl (read-eval-print loop). A repl translates to read-eval-print-loop, and it is an interactive language shell. It takes in a single user input, evaluates it, and returns the result to the user. <= similar to console of devtools 
+			> php artisan tinker 
+			>>> factory(App\Post::class, 50)->create(); 
+		cf. How to create the actual table... 
+			> php artisan migrate <= or > php artisan migrate:fresh 
+
+	# Integration (database, routing, view, ...) 
+		in <project_name>/routes/web.php 
+			use App\Post; 
+			Route::get('/posts', function(){ 
+			    $posts = Post::all(); <= all posts with JSON format 
+			    return view('posts.index')->with('posts', $posts); 
+			    	<= "posts.index" means <project_name>/resources/views/"posts/index.blade.php". 
+			    	<= with('posts', $posts) means to pass $posts in the argument name of "posts". 
+			}); 
+			cf. $post = Post::find(1); <= find a post with id=1 
+		in <project_name>/resources/views/posts/index.blade.php 
+			@extends('layouts.app') <= ~/views/layouts/app.blade.php 
+			@section('content') 
+			    <div class="container"> 
+			        @foreach ($posts as $post) 
+			        <div class="panel panel-default"> 
+			            <div class="panel-body"> 
+			                <a href="/posts/{{$post->id}}">{{ $post->title }}</a> 
+			            </div> 
+			        </div> 
+			        @endforeach 
+			    </div> 
+			@endsection 
+		in <project_name>/resources/views/layouts/app.blade.php 
+			<html> 
+				<head></head> 
+				<body> 
+				    @yield('content') 
+				</body> 
+			</html> 
+		cf. Relationships between tables... 
+			in <project_name>\app\Post.php 
+				<?php 
+				namespace App; 
+				use Illuminate\Database\Eloquent\Model; 
+				class Post extends Model 
+				{ 
+				    public function author() 
+				    { 
+				        return $this->hasOne('App\User', 'id', 'user_id'); 
+							<= default primary-key is "id", but move default primary-key to "user_id" 
+				    } 
+				} 
+			debug using tinker 
+				> php artisan tinker 
+				>>> $thePost = Post::find(1); 
+				>>> $thePost->author()->get(); 
+		cf. How to make and use Controllers... 
+			make a controller 
+				> php artisan make:controller PostsController --resource 
+			see and modify <project_name>\app\Http\Controllers\PostsController.php and add a route to web.php like this: 
+				Route::resource('/posts', "PostsController"); 
+					<= there is no need other Route::get('/posts', ...)
+
+• Laravel: Tips... 
+	How to set up a project with existing folders and files... 
+		> composer install 
+	How to regenerate the list of all classes that need to be included in the project (autoload_classmap.php)... 
+		> composer dump-autoload
+
