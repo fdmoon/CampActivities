@@ -1215,10 +1215,12 @@
 		> php artisan route:list <= in <project_name> folder 
 
 	# Controller 
-		> php artisan make:controller <Controller_name> 
-			<= see <project_name>/app/Http/Controllers/ 
-		cf. Route::get('/path', '<Controller_name>@method'); 
-			<= see <project_name>/routes/web.php 
+		How to make a new controller... 
+			> php artisan make:controller <Controller_name> 
+				<= see <project_name>/app/Http/Controllers/ 
+		in <project_name>/routes/web.php 
+			Route::get('/path', '<Controller_name>@<method_name>'); <= without parameter 
+			Route::get('/path/{param_name}', '<Controller_name>@<method_name>'); <= with parameter(s) 
 
 	# Database <= set .env to connect to database 
 		CASE-I. "users" table... 
@@ -1318,4 +1320,29 @@
 		> composer install 
 	How to regenerate the list of all classes that need to be included in the project (autoload_classmap.php)... 
 		> composer dump-autoload
+
+### DAY 4 - Dec. 14 (Thu)
+
+• https://codingbootcamp.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=4b88fbac-1bea-440f-9c16-5d8ca93f5e41
+
+• https://visualgo.net/en/sorting <= Sorting (Bubble, Selection, Insertion, Merge, Quick, Counting, Radix)
+
+• Big-O notation is used in Computer Science to describe the performance or complexity of an algorithm. 
+	cf. https://rob-bell.net/2009/06/a-beginners-guide-to-big-o-notation/ 
+	cf. http://bigocheatsheet.com/ <= Big-O Algorithm Complexity Cheat Sheet 
+	ex. 
+		O(n) <= Linear 
+		O(logn) <= Binary Search 
+		O(n^3) <= ex. for(site) { for(page) { for(component) {} } }
+
+• https://benchmarkjs.com/ <= A benchmarking library that supports high-resolution timers & returns statistically significant results.
+
+• https://www.gitbook.com/read/book/the-coding-bootcamp/whiteboarding-algorithms-and-interview-questions?key=technicalInterview <= How to Be Successful at Whiteboarding Interviews
+
+• https://www.interviewbit.com/ <= Coding Interview Questions
+
+• https://www.manning.com/books/grokking-algorithms <= Resources on Algorithms
+
+• https://www.manning.com/livevideo/algorithms-in-motion <= Video course based on the book
+Manning Publications
 
