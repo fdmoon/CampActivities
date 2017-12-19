@@ -652,8 +652,8 @@
 		// Make html page. 
 		response.render("handlebars_name", variables); 
 	. Directories... 
-		".\views\layouts\"main.handlebars <= master page 
-		".\views\"*.handlebars <= sub-html inside master page 
+		"./views/layouts/"main.handlebars <= master page 
+		"./views/"*.handlebars <= sub-html inside master page 
 	. Basics... 
 		A handlebars expression is a {{, some contents, followed by a }}. (ex. {{{ body }}}) 
 		Handlebars HTML-escapes values returned by a {{expression}}. If you don't want Handlebars to escape a value, use the "triple-stash", {{{. (ex. {{ statement and/or variable }})
@@ -1292,7 +1292,7 @@
 				</body> 
 			</html> 
 		cf. Relationships between tables... 
-			in <project_name>\app\Post.php 
+			in <project_name>/app/Post.php 
 				<?php 
 				namespace App; 
 				use Illuminate\Database\Eloquent\Model; 
@@ -1311,7 +1311,7 @@
 		cf. How to make and use Controllers... 
 			make a controller 
 				> php artisan make:controller PostsController --resource 
-			see and modify <project_name>\app\Http\Controllers\PostsController.php and add a route to web.php like this: 
+			see and modify <project_name>/app/Http/Controllers/PostsController.php and add a route to web.php like this: 
 				Route::resource('/posts', "PostsController"); 
 					<= there is no need other Route::get('/posts', ...)
 
@@ -1345,4 +1345,100 @@
 
 • https://www.manning.com/livevideo/algorithms-in-motion <= Video course based on the book
 Manning Publications
+
+### DAY 5 - Dec. 15 (Fri)
+
+• https://codingbootcamp.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=e459ddf6-3dae-456a-8d63-7643015e92df
+
+• https://daveceddia.com/create-react-app-express-backend/ <= Create React App with an Express Backend
+
+
+## [WEEK 13]
+
+### DAY 1 - Dec. 18 (Mon)
+
+• https://codingbootcamp.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=d225d288-2d11-463e-8da1-a2271b3b74bc
+
+• React Native: A framework for building native apps using React 
+	<= React-Native-New-Installation-Guides.zip 
+	cf. https://medium.com/@MadApper/react-native-setting-up-the-environment-5c310ef814d5 
+	cf. https://facebook.github.io/react-native/docs/getting-started.html
+
+• WordPress: Get started... 
+	# install MAMP or WAMP 
+	# donwnload WordPress and unzip in C:/MAMP/htdocs (MAMP) or C:/WAMP/www (WAMP) 
+		<= https://wordpress.org/ 
+	# create database in MySQL (using MySQL Workbench) 
+	# in "wordpress" folder, 
+		<= rename wp-config-sample.php to wp-config.php 
+		<= configure database connection settings in "wp-config.php" 
+			change the database name to yours in "define('DB_NAME', 'database_name_here');" 
+			change the user name to yours in "define('DB_NAME', 'database_name_here');" 
+			change the password to yours in define('DB_PASSWORD', 'password_here'); 
+	# go to http://localhost/wordpress/, create app after selecting language, and configure various things!!! 
+	cf. http://cdn.tutsplus.com/wp/uploads/legacy/090_WPCheatSheets/WP_CheatSheet_ThemeAnatomy.jpg
+
+• WordPress: How to create custumized theme maintaining all WordPress functions... 
+	# in C:/MAMP/htdocs/wordpress/wp-content/themes, 
+		create new folder through copy and paste from existing theme 
+
+	# in header.php, get started with a copy of your html... 
+		<html lang="<?php language_attributes(); ?>"> 
+
+		in <head> tag... 
+			<title><?php echo get_bloginfo('name'); ?></title> 
+			<meta charset="<?php bloginfo('charset'); ?>"> 
+			<link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri()); ?>/assets/css/main.css"> 
+			<?php wp_head() ?> <= at the end of <head> tag 
+
+		<body <?php body_class(); ?>> 
+			<header> 
+				<h1><a href="<?php home_url('/'); ?>"><?php bloginfo('name'); ?></a></h1> 
+				<h2><?php bloginfo('description'); ?></h2> 
+				<form action="/" method="get"> 
+					<input class="fr" type="search" results="5" placeholder="Search..." name="s"/ value="<?php the_search_query(); ?>" /> 
+				</form> 
+				<?php if(has_nav_menu('top')) : ?> 
+					<?php get_template_part('template-parts/navigation/navigation', 'top'); ?> 
+				<?php endif; ?> 
+			</header> 
+
+	# in index.php, refer to the original index.php to add posts in your page... 
+		for example, 
+			<?php while(have_posts()): the_post()?> 
+				<h2><?php the_title()?></h2> 
+				<?php the_content(__('Continues...'));?> 
+			<?php endwhile;?> 
+
+	# in functions.php, do like this to add your own style and js files... 
+		/** 
+		 * Enqueue scripts and styles. 
+		 */ 
+		function twentyseventeen_scripts() { 
+			... 
+			wp_enqueue_script('main-style', get_stylesheet_directory_uri() . '/assets/css/main.css'); 
+			wp_enqueue_script('main-script', get_stylesheet_directory_uri() . '/assets/js/main.js'); 
+		}
+
+• https://twitter.com/i/moments/880688233641848832 <= A collections of little tips from @steveschoger to improve your visual design skills with the little details that make a big difference
+
+• https://designshack.net/articles/css/5-steps-to-drastically-improve-your-css-knowledge-in-24-hours/ <= 5 Steps to Drastically Improve Your CSS Knowledge in 24 Hours
+
+• https://www.templatemonster.com/ <= Premium Templates for Websites -- That Perfectly Fit Your Business 
+	Deva Palasingam... 
+	Hey Jim, can you post how you go about doing freelance Wordpress work? You mentioned the things like asking what websites the client likes and using html/css from template monster. Thanks 
+	Jim... 
+		1. Get the specs (business requirements) for the clients web app. 
+		2. Estimate each requirement time and multiple by an acceptable rate. 
+		3. Draft a contract with a schedule of work listing exactly what is being paid for, and the compensation expected for that work. 
+		4. Take a retainer from the total to get started. 
+		5. Run a design questionnaire and ask for a list of sites they like and why, sites they dont like and why, and a final list of direct competitors sites and what they like and dislike about their competitors web presence. 
+		6. Go to templatemonster.com and modify three demo sites with their info. Use a full page screenshot plugin to capture them and present three demo mockups to the client. 
+		7. Give them a set amount of time to return with a selection and one round of changes. 
+		8. Use the demo sites to rebuild the interactive demo site. 
+		9. Once approved turn the static UI into a wordpress theme.
+
+### DAY 2 - Dec. 19 (Tue)
+
+• Test code references... 03-TDD-To-Do-Basic + 04-TDD-To-Do-Redux
 

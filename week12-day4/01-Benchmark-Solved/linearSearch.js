@@ -1,5 +1,5 @@
 // Require dependencies.
-var generate = require("../shared/generate");
+var generate = require("../01-Benchmark-shared/generate");
 
 // Generate array of given length.
 var length = 14;
