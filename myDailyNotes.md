@@ -1409,6 +1409,7 @@ Manning Publications
 				<h2><?php the_title()?></h2> 
 				<?php the_content(__('Continues...'));?> 
 			<?php endwhile;?> 
+		cf. WP-TheLoop-VisualModel.png 
 
 	# in functions.php, do like this to add your own style and js files... 
 		/** 
@@ -1440,5 +1441,27 @@ Manning Publications
 
 ### DAY 2 - Dec. 19 (Tue)
 
+• X
+
 • Test code references... 03-TDD-To-Do-Basic + 04-TDD-To-Do-Redux
+
+• React Native: Get started... 
+	> npm install -g rninit 
+	> rninit init <project_name> --source react-native@0.37.0 
+	> ... 
+	cf. to verify your code, install emulator fit for your target OS and run on it!
+
+• React Native: refer to activities in "week13-day2"!
+
+• https://css-tricks.com/snippets/css/a-guide-to-flexbox/ <= A Complete Guide to "Flexbox"
+
+• https://github.com/futurice/pepperoni-app-kit 
+	<= Pepperoni - React Native App Starter Kit for Android and iOS 
+	<= http://getpepperoni.com
+
+### DAY 3 - Dec. 20 (Wed)
+
+• Boilerplate for MERN and Laravel... 
+	<= homework-solutions/18-MERN 
+	<= homework-solutions/19-Laravel
 
