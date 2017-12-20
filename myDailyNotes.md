@@ -1121,6 +1121,8 @@
 
 • https://github.com/ideascomealive/mern2 <= Here is a generic MERN stack CRUD app.
 
+• https://github.com/JaffeJoseph/TheGoodsReact <= Here is an example of a MERN stack from a prior cohort. When you load it locally, you'll have to add items in order to see more items on the screen (like a bike, a book, anything else you'd like to rent to people, etc.)
+
 
 ## [WEEK 12]
 
@@ -1464,4 +1466,8 @@ Manning Publications
 • Boilerplate for MERN and Laravel... 
 	<= homework-solutions/18-MERN 
 	<= homework-solutions/19-Laravel
+
+• react-d3, recharts, ... <= React Chart Packages
+
+• https://react.rocks/example/react-3d-carousel <= 3D Carousel from scratch with good blog writeup
 
