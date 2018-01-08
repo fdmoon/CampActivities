@@ -1471,3 +1471,17 @@ Manning Publications
 
 • https://react.rocks/example/react-3d-carousel <= 3D Carousel from scratch with good blog writeup
 
+### OTHERS
+
+• JS: About bind() function... 
+	In ECMAScript 2015 classes you need to bind your methods manually. In fact, all you actually need to bind are event handlers and functions passed down as properties (a.k.a. callbacks). 
+	Combined with another feature, called "arrow functions syntax" it fixes the problem with binding in a very elegant way!!!
+
+• NPM vs. YARN 
+	<= https://scotch.io/@brian_kimo/npm-vs-yarn 
+	<= https://www.sitepoint.com/yarn-vs-npm
+
+• https://www.w3schools.com/cssref/css3_pr_flex.asp <= CSS flex Property
+
+• https://www.w3schools.com/css/css_tooltip.asp <= CSS Tooltip
+
