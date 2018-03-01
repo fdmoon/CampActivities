@@ -1485,3 +1485,5 @@ Manning Publications
 
 • https://www.w3schools.com/css/css_tooltip.asp <= CSS Tooltip
 
+• https://javascript30.com/ <= 30 Day Vanilla JS Coding Challenge
+
